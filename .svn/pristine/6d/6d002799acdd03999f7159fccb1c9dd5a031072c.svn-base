@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="../style/miyun.min.css" media="screen" title="no title">
+    <link rel="stylesheet" href="../style/weui.min.css" media="screen" title="no title">
+    <script src="../js/weui.min.js"></script>
+    <title>提问医生</title>
+</head>
+<body class="body">
+    <div class="weui-tab__panel">
+        <div class="ask-header">
+            <h1 class="ask-title">孕期有疑问 快速问医生</h1>
+            <form role="form" action="SERVICE_URL" method="POST">
+                <div class="ask-detail">
+                    <textarea id="textarea-length" class="ask-detail-textarea" rows="8" maxlength="200" placeholder="问题描述，可附带检查报告及症状示意图"></textarea>
+                    <div class="ask-detail-meta">
+                        <div class="ask-detail-counter"><span id="counter">0</span>/200</div>
+                    </div>
+                </div>
+            </form>
+        </div> 
+        <div class="weui-cells weui-cells_form" id="uploaderCustom">
+            <div class="weui-cell">
+                <div class="weui-cell__bd">
+                    <div class="weui-uploader">
+                        <div class="weui-uploader__hd">
+                            <p class="weui-uploader__title">请选择图片</p>
+                        </div>
+                        <div class="weui-uploader__bd">
+                            <ul class="weui-uploader__files" id="uploaderCustomFiles"></ul>
+                            <div class="weui-uploader__input-box">
+                                <input id="uploaderCustomInput" name="uploaderCustomInput" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ask-price">￥10.00</div>
+        <div class="ask-btn-area">
+            <button id="uploaderCustomBtn" type="button" class="ask-btn-primary"  >我要问</button>
+        </div>
+    </div>
+
+    <script src="../js/jquery-2.1.4.min.js"></script>
+    <script src="../js/api.js"></script>
+    <script type="text/javascript">
+        var textarea = document.getElementById('textarea-length');
+        var counter = document.getElementById('counter');
+        var textareaLength;
+        textarea.addEventListener('input', function () {
+            counter.innerText = textarea.value.length;
+        })
+
+    </script>
+    <script>
+        var button = document.querySelector('#uploaderCustomBtn');
+        var formData = new FormData();
+        var j = 0;
+        var inputFile = document.querySelector('#uploaderCustomInput');
+        inputFile.onchange = function () {
+            var files = inputFile.files;
+            console.log(files.length + '##');
+            for (var i = 0; i < files.length; i++) {
+                formData.append(j, files[i]);
+                j++;
+            }
+        }
+        document.getElementById("uploaderCustomBtn").addEventListener('click', function () {
+
+            formData.append("code", getUrlParam("code"));
+            formData.append("fatherQueID", getUrlParam("fatherQueID"));
+            formData.append("DocID", 0);
+            formData.append("QueDetail", document.getElementById('textarea-length').value);
+
+            this.setAttribute('disabled', 'true');
+            this.classList.add('ask-btn-disabled');
+
+            button.innerHTML = '提交中';
+            var xhr = new XMLHttpRequest();
+            xhr.onload = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    button.innerHTML = '提交成功';
+                    var hJson = xhr.responseText;
+                    var parsedJson = jQuery.parseJSON(hJson);
+                    window.location = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx2500d73cdacd7fa6&redirect_uri=http%3A%2F%2Fwww.bestmiyun.com%2Fmiyun%2Fpatient%2Fpay.html%3fQueId%3d" + parsedJson.queId + "&response_type=code&scope=snsapi_base&state=123#wechat_redirect";
+                }
+            }
+
+            xhr.onerror = function () {
+                button.innerHTML = '提交失败,重新提交';
+            }
+            // 进度
+            xhr.upload.onprogress = function (e) {
+                console.log('process');
+                if (e.lengthComputable) {
+                    button.innerHTML = '正在提交' + Math.round(100 * e.loaded / e.total) + '%';
+                }
+            }
+            // ## 配置此地址
+            xhr.open("POST", '../../Services/MedicalCare.ashx?action=addquestion', true);
+            xhr.send(formData);
+        });
+        var uploadCustomFileList1 = [];
+
+        // 调用
+        weui.uploader('#uploaderCustom', {
+            url: '',
+            auto: false,
+            onQueued: function () {
+                uploadCustomFileList1.push(this);
+            }
+        });
+        // 缩略图预览
+        document.querySelector('#uploaderCustomFiles').addEventListener('click', function (e) {
+            var target = e.target;
+
+            while (!target.classList.contains('weui-uploader__file') && target) {
+                target = target.parentNode;
+            }
+            if (!target) return;
+
+            var url = target.getAttribute('style') || '';
+            var id = target.getAttribute('data-id');
+
+            if (url) {
+                url = url.match(/url\('(.*?)'\)/)[1];
+                console.log(url);
+            }
+            var gallery = weui.gallery(url, {
+                onDelete: function () {
+                    weui.confirm('确定删除该图片？', function () {
+                        formData.delete((id - 1).toString());
+                        target.remove();
+                        gallery.hide();
+                    });
+                }
+            });
+        });
+
+        var textarea = document.getElementById('textarea-length');
+        var counter = document.getElementById('counter');
+        var textareaLength;
+        textarea.addEventListener('input', function () {
+            counter.innerText = textarea.value.length;
+        })
+	</script>
+</body>
+</html>

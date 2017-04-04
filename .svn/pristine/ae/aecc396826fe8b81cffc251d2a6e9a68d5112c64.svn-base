@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="stylesheet" type="text/css" href="../style/bbt-mobile.min.css">
+  <title>产检时间</title>
+</head>
+
+<body>
+  <div class="bm-body">
+    <div class="bm-panel">
+      <div class="bm-feed-item">
+        <img src="./images/baby.png" alt="baby" class="bm-feed-item-left">
+        <div class="bm-feed-item-right">
+          <p>宝贝，妈妈顺利完成本次产检啦</p>
+          <p>妈妈会继续加油的</p>
+        </div>
+      </div>
+    </div>
+    <div class="bm-list-title">宝宝信息</div>
+    <div class="bm-list-body">
+      <div class="bm-list-item">
+        <div class="bm-list-item-left bm-label-short">
+          孕周
+        </div>
+        <div class="bm-list-item-right">
+          <input type="text" class="bm-input" placeholder="请输入宝宝孕周">
+        </div>
+        <div class="bm-list-item-right-extra">
+          周
+        </div>
+      </div>
+      <div class="bm-list-item">
+        <div class="bm-list-item-left bm-label-short">
+          体重
+        </div>
+        <div class="bm-list-item-right">
+          <input type="text" class="bm-input" placeholder="请输入宝宝宝体重">
+        </div>
+        <div class="bm-list-item-right-extra">
+          公斤
+        </div>
+      </div>
+    </div>
+    <div class="bm-list-title">温馨提示</div>
+    <p class="bm-media-box-intro">妈妈孕前体重<sapn>xx</sapn>公斤，孕<span>1</span>周,体重正常增长值为xx-xx公斤，妈妈体重增长了xx公斤，妈妈控制得很好呢！</p>
+        <div class="bm-btn-area">
+      <button class="bm-btn bm-btn-primary" id="set-date">完成</button>
+    </div>
+  </div>
+</body>
+
+</html>

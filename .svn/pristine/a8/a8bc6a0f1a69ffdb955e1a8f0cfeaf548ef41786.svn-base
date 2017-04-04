@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" href="../style/miyun.min.css" media="screen" title="no title">
+	<title>胎儿发育</title>
+</head>
+
+<body>
+	<div class="container">
+		<div class="tab">
+			<div class="swiper-container" data-space-between='10' data-pagination='.swiper-pagination' data-autoplay="1000">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="../images/banner2-1.png" alt=""></div>
+					<div class="swiper-slide"><img src="../images/banner2-2.png" alt=""></div>
+					<div class="swiper-slide"><img src="../images/banner2-3.png" alt=""></div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+			<div class="swiper-container" data-space-between='10' data-pagination='.swiper-pagination' data-autoplay="1000">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="doctor-tips">
+							<p class="tips-title">致各位妈妈的话</p>
+							<p class="tips-detail">在怀孕的前3个月，胎宝宝进入快速生长发育期，孕妈妈的营养非常关键。有妊娠反应是很正常的，如果孕吐严重，可在医生的指导下补充维生素。</p>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="doctor-tips">
+							<p class="tips-title">致各位妈妈的话</p>
+							<p class="tips-detail">进入孕中期，胎宝宝已逐步发育成形，在妈妈肚子里活动明显增多，妈妈也渡过了妊娠反应最强烈的阶段。这个时期在注意营养均衡的同时，可以开始加强跟胎宝宝的交流互动。</p>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="doctor-tips">
+							<p class="tips-title">致各位妈妈的话</p>
+							<p class="tips-detail">进入孕晚期，胎宝宝全身大部分骨骼都在慢慢硬化，大脑发育不断完善。在这个阶段，孕妈妈要保持轻松愉快的心情和适度的运动，迎接预产期的到来。</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tab-bd">
+				<div class="tab-bd-item tab-bd-item-active" id="tab1">
+					<div class="feed">
+						<ul>
+							<a href="http://mp.weixin.qq.com/s/SPDiOl7cQLPgMxAwk6Ti3Q">
+								<li class="feed-item">
+									<img class="feed-item-icon" src="../images/icon.svg" alt="" />
+									<p class="feed-item-title">孕早期胎儿发育过程图</p>
+									<img class="feed-item-image" src="../images/item2-1.png">
+								</li>
+							</a>
+							<a href="http://mp.weixin.qq.com/s/Z1IfXgyXQDFzWfuhh-JVgA">
+								<li class="feed-item">
+									<img class="feed-item-icon" src="../images/icon.svg" alt="" />
+									<p class="feed-item-title">孕中期胎儿发育过程图</p>
+									<img class="feed-item-image" src="../images/item2-2.png">
+								</li>
+							</a>
+							<a href="http://mp.weixin.qq.com/s/R4y-7leu8ml1GOij1CYOWw">
+								<li class="feed-item">
+									<img class="feed-item-icon" src="../images/icon.svg" alt="" />
+									<p class="feed-item-title">孕晚期胎儿发育过程图</p>
+									<img class="feed-item-image" src="../images/item2-3.png">
+								</li>
+							</a>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<script src="../js/jquery-2.1.4.min.js">
+	</script>
+	<script src="../js/swiper.min.js"></script>
+	<script>
+		$(".swiper-container").swiper({
+			loop: true,
+			autoplay: 4000
+		});
+	</script>
+</body>
+
+</html>

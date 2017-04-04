@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="stylesheet" type="text/css" href="../style/bbt-mobile.min.css">
+  <title>查看评价</title>
+</head>
+
+<body>
+  <div class="miyun-body">
+
+    <div class="bm-list-title">评价列表</div>
+    <div class="bm-panel">
+      <div class="bm-media-box">
+        <div class="bm-media-box-left">
+          <div class="bm-media-box-left-title miyun-small-font">
+            真棒！
+          </div>
+          <div class="bm-media-box-left-meta">
+            2017-1-1
+          </div>
+        </div>
+      </div>
+      <div class="bm-media-box">
+        <div class="bm-media-box-left">
+          <div class="bm-media-box-left-title miyun-small-font">
+            真棒！
+          </div>
+          <div class="bm-media-box-left-meta">
+            2017-1-1
+          </div>
+        </div>
+      </div>
+      <div class="bm-media-box">
+        <div class="bm-media-box-left">
+          <div class="bm-media-box-left-title miyun-small-font">
+            真棒！
+          </div>
+          <div class="bm-media-box-left-meta">
+            2017-1-1
+          </div>
+        </div>
+      </div>
+      <div class="bm-media-box">
+        <div class="bm-media-box-left">
+          <div class="bm-media-box-left-title miyun-small-font">
+            真棒！
+          </div>
+          <div class="bm-media-box-left-meta">
+            2017-1-1
+          </div>
+        </div>
+      </div>
+      <div class="bm-media-box">
+        <div class="bm-media-box-left">
+          <div class="bm-media-box-left-title miyun-small-font">
+            真棒！
+          </div>
+          <div class="bm-media-box-left-meta">
+            2017-1-1
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+   <div class="bm-tab miyun-nav-bar-bottom">
+    <a href="./pay.html" class="bm-tab-item">
+    我要评价
+    </a>
+  </div>
+</body>
+
+</html>

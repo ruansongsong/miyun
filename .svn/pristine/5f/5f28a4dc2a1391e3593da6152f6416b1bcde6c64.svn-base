@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" href="../style/miyun.min.css" media="screen" title="no title">
+  <title>提交成功</title>
+</head>
+<body>
+  <div class="success-icon"></div>
+  <p class="success-info">您的问题已提交</p>
+  <p class="success-info">请耐心等待医生答复</p>
+</body>
+</html>

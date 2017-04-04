@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" href="../style/miyun.min.css" media="screen" title="no title">
+	<title>孕期知识</title>
+</head>
+
+<body>
+	<div class="container">
+		<div class="header">
+			<img src="../images/banner5-1.png" alt="" class="header-image">
+		</div>
+		<h1>知识小库</h1>
+		<div id="list">
+		</div>
+		<div id="loading" class="load-more">
+			<i class="loading"></i>
+			<span class="load-more-tips">正在加载</spaSn>
+	</div>
+	<div id="loaded" class="load-more load-more-line">
+      <span class="load-more-tips">加载完毕</span>
+		</div>
+	</div>
+	</div>
+	<script src="../js/jquery-2.1.4.min.js"></script>
+	<script src="../js/jquery-weui.min.js"></script>
+	<script>
+		$.getJSON('../data.json', function(jsonData) {
+			var list = jsonData.data[0]['page_list'];
+			var listLength = list.length;
+			var listDetail = '';
+			var count = 0;
+			if (listLength > 5) {
+				while (count < 5) {
+					listDetail += "<a href='" + list[count]['article_url'] + "'><div class='time-line'><div class='time-line-circle'></div><div class='time-line-line'></div><div class='time-line-info'><p class='time-line-title'>" + list[count]['article_title'] +
+						"</p><img src='" + list[count]['article_image'] + "' class='time-line-img'></div></div></a>";
+					count++;
+				}
+			}
+			// 首先显示5条
+			$('#list').append(listDetail);
+			// 动态加载
+			var loading = false;
+			$(document.body).infinite(0).on("infinite", function() {
+				if (loading) return;
+				loading = true;
+				var loadDetail = '';
+				if (listLength > 5) {
+					var i = 0;
+					while (i < 5 && count < listLength) {
+						loadDetail += "<a href='" + list[count]['article_url'] + "'><div class='time-line'><div class='time-line-circle'></div><div class='time-line-line'></div><div class='time-line-info'><p class='time-line-title'>" + list[count]['article_title'] +
+							"</p><img src='" + list[count]['article_image'] + "' class='time-line-img'></div></div></a>";
+						i++;
+						count++;
+					}
+				}
+				$('#list').append(loadDetail);
+				loading = false;
+				// 如果已经加载完毕
+				if (count == listLength) {
+					$('#loading').hide();
+					$('#loaded').show();
+				}
+			});
+		})
+	</script>
+</body>
+
+</html>

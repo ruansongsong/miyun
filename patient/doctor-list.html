@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" href="../style/miyun.min.css" media="screen" title="no title">
+  <title>一元看答案</title>
+</head>
+<body class="body">
+<div class="ask-body" id="doctors">
+    <div class="doctor-item">
+        <div class="doctor-item-left">
+            <img src="../images/ask/avatar.jpg" alt="医生照片">
+            <div class="ask-item-doctor-meta-like">100位妈妈</div>
+        </div>
+        <div class="doctor-item-right">
+            <p class="doctor-info"><span class="doctor-name">林医生</span> <span class="doctor-location">水电医院</span></p>
+            <p class="doctor-skill">擅长产科，从事妇科20余年擅长产科，从事妇科20余年擅长产科，从事妇科20余年</p>
+            <a href="./ask-one-doctor.html" class="ask-btn-primary">提问 ￥10</a>
+        </div>
+    </div>
+</div>
+
+<script src="../js/jquery-2.1.4.min.js"></script>
+<script src="../js/api.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $.ajax({
+            "url" : "../../Services/MedicalCare.ashx?action=doctorlist",
+            "type" : "POST",
+            "dataType" : "json",
+            "data":{
+                "userweixinid":getUrlParam("userid")
+            },
+            "success" : function (doctorList) {
+                var toAppend = "";
+                doctorList.forEach(function(doctor){
+                    toAppend += "<div class=\"doctor-item\">";
+                    toAppend += "<div class=\"doctor-item-left\">";
+                    toAppend += "<img src=\"" + doctor.photo + "\" alt=\"医生照片\">";
+                    toAppend += "<div class=\"ask-item-doctor-meta-like\">" + doctor.agreement + "位妈妈</div>";
+                    toAppend += "</div>";
+                    toAppend += "<div class=\"doctor-item-right\">";
+                    toAppend += "<p class=\"doctor-info\"><span class=\"doctor-name\">" + doctor.name + "</span> <span class=\"doctor-location\">" + doctor.hospital + "</span></p>";
+                    toAppend += "<p class=\"doctor-skill\">" + doctor.skill + "</p>";
+                    toAppend += "<a href=\"./ask-one-doctor.html\" class=\"ask-btn-primary\">提问 ￥10</a>";
+                    toAppend += "</div>"
+                    toAppend += "</div>"
+                });
+                $('#doctors').append(toAppend)
+            },
+            "error":function () {
+            }
+        });
+    });
+</script>
+</body>
+</html>

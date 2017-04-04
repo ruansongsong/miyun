@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="stylesheet" href="../style/miyun.min.css" media="screen" title="no title">
+  <title>我的提问</title>
+  <style>
+    .ask-body-wrap {
+      padding-top: 125px;
+    }
+  </style>
+</head>
+
+<body class="body">
+  <div class="ask-body">
+    <div class="ask-header  ask-header-fixed">
+      <h1 class="ask-title">孕期有疑问 快速问医生</h1>
+      <a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx2500d73cdacd7fa6&redirect_uri=http%3A%2F%2Fwww.bestmiyun.com%2Fmiyun%2Fpatient%2Fswitch-doctor-to-ask.html&response_type=code&scope=snsapi_base&state=123#wechat_redirect"
+        class="ask-button">我要问</a>
+    </div>
+    <!--<div class="question-header">
+      <div class="question-header-left" id="statistics">
+        <p>已分享<span>0</span>个问题</p>
+        <p>未回答<span>0</span>个问题</p>
+        <p>分享问题<span>0</span>次</p>
+        <p>小挣<span>0</span>元</p>
+      </div>
+      <div class="question-header-right">
+
+        <a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx2500d73cdacd7fa6&redirect_uri=http%3A%2F%2Fwww.bestmiyun.com%2Fmiyun%2Fpatient%2Fswitch-doctor-to-ask.html&response_type=code&scope=snsapi_base&state=123#wechat_redirect"
+          class="ask-btn-primary">我要问</a>
+        <a href="#" class="ask-btn-primary">提现</a>
+      </div>
+    </div>-->
+  </div>
+  <div class="ask-body-wrap">
+    <div class="component-title">我的提问</div>
+    <div class="ask-body" id="questions">
+    </div>
+  </div>
+  <script src="../js/jquery-2.1.4.min.js"></script>
+  <script src="../js/api.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $.ajax({
+        "url": "../../Services/MedicalCare.ashx?action=getmyquestion",
+        "type": "POST",
+        "dataType": "json",
+        "data": {
+          "code": getUrlParam("code")
+        },
+        "success": function (questionsInfo) {
+          var statistics = "";
+          //statistics += "<p>已分享<span>" + questionsInfo.shared + "</span>个问题</p>";
+          //statistics += "<p>未回答<span>" + questionsInfo.waitting + "</span>个问题</p>";
+          //statistics += "<p>分享问题<span>" + questionsInfo.sharedCount + "</span>次</p>";
+          //statistics += "<p>小挣<span>" + questionsInfo.earned + "</span>元</p>";
+          //$("#statistics").empty().append(statistics);
+
+          var toAppend = "";
+          questionsInfo.forEach(function (question) {
+            toAppend += "<div class=\"question-item\">";
+            toAppend += "<div class=\"question-item-info\">";
+            toAppend += "<p class=\"question-item-time\">" + question.queTime + "</p>";
+            toAppend += "<p class=\"question-item-detail\">" + question.queDetail + "</p>";
+            toAppend += "</div>";
+            toAppend += "<div class=\"question-item-extra\">";
+            toAppend += "<div class=\"ask-btn-area\">";
+            if (question.answerCount > 0) {
+
+              toAppend +=
+                "<a href=\"https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx2500d73cdacd7fa6&redirect_uri=http%3A%2F%2Fwww.bestmiyun.com%2Fmiyun%2Fpatient%2Fview-my-question-answer.html%3fQueId%3d" +
+                question.queId +
+                "&response_type=code&scope=snsapi_base&state=123#wechat_redirect\" class=\"ask-btn-primary\">医生已回复，查看答案</a>";
+            } else {
+              toAppend += "<a href=\"\" class=\"ask-btn-primary ask-btn-disabled\">请耐心等待医生答复</a>";
+            }
+            toAppend += "</div>";
+            //toAppend += "<p class=\"question-item-result\"><span>" + question.QUEVIEWED + "</span>人看答案，已挣<span>" + question.QUEINCOME + "</span>元</p>";
+            toAppend += "<p class=\"question-item-result\"><span>0</span>人看答案，已挣<span>0</span>元</p>";
+            toAppend += "</div>"
+            toAppend += "</div>"
+          });
+          $('#questions').append(toAppend)
+        },
+        "error": function () {}
+      });
+    });
+  </script>
+</body>
+
+</html>

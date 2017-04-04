@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="../style/miyun.min.css" media="screen" title="no title">
+    <title>我来答</title>
+    <style>
+        .doctor-personal-center {
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body class="body">
+    
+    <div class="doctor-header">
+        <p class="doctor-header-title">宝宝小问题，妈妈好焦心</p>
+        <p class="doctor-header-title">感谢医生答疑解惑</p>
+    </div>
+
+    <div class="component-title">个人中心</div>
+
+    <div class="doctor-header">
+        <div class="doctor-personal-center" id="doctor-info"> 
+        </div>
+    </div>
+
+    <div class="component-title">提问</div>
+    <div class="ask-body" id="questions">  
+    </div>
+
+    <script src="../js/jquery-2.1.4.min.js"></script>
+    <script src="../js/api.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $.ajax({
+                "url" : "../../Services/MedicalCare.ashx?action=getdocquestion",
+                "type" : "POST",
+                "dataType" : "json",
+                "data":{
+                    "code":getUrlParam("code")
+                },
+                "success" : function (doctor) {
+                    var infoAppend = "";
+                    infoAppend += "<div class=\"doctor-personal-center-left\">";
+                    infoAppend += "<img class=\"doctor-personal-avatar\" src=\"" + doctor.DoctorInfo.image + "\" alt=\"\">";
+                    infoAppend += "<p class=\"doctor-personal-name\"><span>" + doctor.DoctorInfo.doctName + "</span>医生</p>"
+                    infoAppend += "</div>";
+                    // infoAppend += "<div class=\"doctor-personal-center-middle\">";
+                    // infoAppend += "<p>未解答指定答疑<span>" + "1" + "</span>个</p>";
+                    // infoAppend += "<p>已回答<span>" + "是"+ "</span>个</p>";
+                    // infoAppend += "<p>答复被分享<span>" +"是" + "</span>次</p>";
+                    // infoAppend += "</div>";
+                    infoAppend += "<div class=\"doctor-personal-center-right\">";
+                    infoAppend += "<div class=\"doctor-personal-earning\">钱包￥<span>" + "0" + "</span></div>";
+                    infoAppend += "<a class=\"ask-btn-primary\">提现</a>";
+                    infoAppend += "</div>";
+                    $('#doctor-info').html("");
+                    $('#doctor-info').append(infoAppend);
+
+                    var toAppend = "";
+                    doctor.QuestionList.forEach(function(question){
+                        toAppend += "<div class=\"question-item\">";
+                        toAppend += "<div class=\"question-item-info\">";
+                        toAppend += "<p class=\"question-item-time\">" + question.queTime + "</p>";
+                        toAppend += "<p class=\"question-item-detail\">" + question.queDetail+ "</p>";
+                        toAppend += "</div>";
+                        toAppend += "<div class=\"question-item-extra\">";
+                        toAppend += "<div class=\"ask-btn-area\">";
+                        if (question.docID != "0") {
+                            toAppend = toAppend + "<a href=\"https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx2500d73cdacd7fa6&redirect_uri=http%3A%2F%2Fwww.bestmiyun.com%2Fmiyun%2Fdoctor%2Fanswer-question.html%3fQueId%3d" + question.queId + "&response_type=code&scope=snsapi_base&state=123#wechat_redirect" + "\" class=\"ask-btn-primary\">特邀您回答</a>";
+                        } else {
+                            toAppend = toAppend + "<a href=\"https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx2500d73cdacd7fa6&redirect_uri=http%3A%2F%2Fwww.bestmiyun.com%2Fmiyun%2Fdoctor%2Fanswer-question.html%3fQueId%3d" + question.queId + "&response_type=code&scope=snsapi_base&state=123#wechat_redirect" + "\" class=\"ask-btn-primary\">医生抢答</a>";
+                        }
+                        toAppend += "</div>";
+                        if (question.docID != "0") {
+                            toAppend += "<p class=\"question-item-result\"><span>" + "1" + "</span>位妈妈推荐</p>";
+                        }
+
+                        toAppend += "</div>";
+                        toAppend += "</div>";
+                    });
+
+                    $('#questions').html("");
+                    $('#questions').append(toAppend)
+                },
+                "error":function () {
+                }
+            });
+        });
+    </script>
+</body>
+</html>

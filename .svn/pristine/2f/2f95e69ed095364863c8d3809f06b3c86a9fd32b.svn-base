@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="../style/miyun.min.css" media="screen" title="no title">
+    <link rel="stylesheet" href="../style/weui.min.css">
+    <title>查看问题答案</title>
+</head>
+<body class="body">
+    <div class="component-title">问题</div>
+    <div class="ask-body">
+        <p class="question-detail" id="question">
+            怀孕5个月， 腰酸背痛，是什么原因？
+       
+        </p>
+    </div>
+    <div class="component-title">答案</div>
+    <div class="ask-body">
+        <p class="question-detail" id="answer">
+            你好， 我是某某医院,孕期腰背痛你好， 我是某某医院,孕期腰背痛你好， 我是某某医院,孕期腰背痛你好， 我是某某医院,孕期腰背痛
+       
+        </p>
+    </div>
+    <p class="weui-cells__title">查看图片</p>
+    <div class="weui-cells weui-cells_form" id="uploaderCustom">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <div class="weui-uploader">
+                    <div class="weui-uploader__bd" id="shotcutview">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ask-btn-area">
+        <a href="./ask-one-doctor.html" class="ask-btn-primary" id="onemore" disable="false">追问 ￥0</a>
+    </div>
+    <div class="ask-btn-area">
+        <a href="#" class="ask-btn-primary" onclick="like()">点赞！医生棒棒哒！</a>
+    </div>
+    <div id="free-tag">
+        <p class="free-tag">您有一次免费追问机会</p>
+    </div>
+
+    <script src="../js/jquery-2.1.4.min.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/weui.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.ajax({
+                "url": "../../Services/MedicalCare.ashx?action=getanswer",
+                "type": "POST",
+                "dataType": "json",
+                "data": {
+                    "code": getUrlParam("code"),
+                    "QueId": getUrlParam("QueId")
+                },
+                "success": function (questionInfo) {
+                    $("#question").html("");
+                    $("#question").append(questionInfo[0].queDetail);
+                    $("#answer").html("");
+                    $("#answer").append(questionInfo[0].ansDetail);
+                    var dutViewInnerHtml = " <ul class=\"weui-uploader__files\" id=\"uploaderCustomFiles\">";
+                    for (var i = 0; i < questionInfo[0].imageUrls.length; i++) {
+                        dutViewInnerHtml = dutViewInnerHtml + " <li class=\"weui-uploader__file\" data-id=\"" + i + "\" style=\"background-image: url('" + questionInfo[0].imageUrls[i] + "');\"></li>";
+                    }
+                    document.getElementById("shotcutview").innerHTML = dutViewInnerHtml + "</ul>";
+                    document.getElementById("onemore").href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx2500d73cdacd7fa6&redirect_uri=http%3A%2F%2Fwww.bestmiyun.com%2Fmiyun%2Fpatient%2Fswitch-doctor-to-ask.html%3ffatherQueID%3d" + questionInfo[0].queId + "&response_type=code&scope=snsapi_base&state=123#wechat_redirect";
+
+                    if (!questionInfo.askOneMore) {
+                        $("#onemore").attr('disable', 'true');
+                        $("free-tag").empty();
+                    }
+
+                    document.querySelector('#uploaderCustomFiles').addEventListener('click', function (e) {
+                        var target = e.target;
+                        while (!target.classList.contains('weui-uploader__file') && target) {
+                            target = target.parentNode;
+                        }
+                        if (!target) return;
+                        var url = target.getAttribute('style') || '';
+                        var id = target.getAttribute('data-id'); 
+                        if (url) {
+                            url = url.match(/url\('(.*?)'\)/)[1];
+                            var gallery = weui.gallery(url);
+                        }
+                        
+                    });
+                },
+                "error": function () {
+                }
+            });
+        });
+    </script> 
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" href="../style/miyun.min.css" media="screen" title="no title">
+	<title>我要问</title>
+	<style media="screen">
+		body {
+			background: #F4F1F3;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="intro">
+			<p>孕妈妈您好</p>
+			<p>280天的孕育是一段</p>
+			<p>甜蜜又艰辛的旅程</p>
+			<p>在这里</p>
+			<p>有关孕期的任何疑问</p>
+			<p>（包括孕期检查、营养、情绪等）</p>
+			<p>请在公众号留言， </p>
+			<p>我们将请专家尽快为您答疑</p>
+			<p>如有严重不适还请尽早到医院咨询就医</p>
+		</div>
+		<a href="./join-group.html">
+			<button type="button" name="button">关注我吧</button>
+		</a>
+	</div>
+
+</body>
+
+</html>

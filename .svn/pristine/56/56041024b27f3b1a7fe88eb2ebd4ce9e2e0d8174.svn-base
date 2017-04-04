@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="../style/miyun.min.css" media="screen" title="no title">
+    <title>自然分娩</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="../images/banner4-1.png" alt="" class="header-image">
+        </div>
+        <h1>知识小库</h1>
+        <a href="http://mp.weixin.qq.com/s/SZQhjfH2kN6jAM_1-oOw4g">
+            <div class="time-line">
+                <div class="time-line-circle"></div>
+                <div class="time-line-line"></div>
+                <!-- 时间线内容区 -->
+                <div class="time-line-info">
+                    <p class="time-line-title">了解更多分娩的知识</p>
+                    <img src="../images/item4-1.png" alt="" class="time-line-img">
+                </div>
+            </div>
+        </a>
+        <a href="https://mp.weixin.qq.com/s?__biz=MzIwNjY2NDc2Nw==&mid=2247483691&idx=2&sn=7769571688206e8a17d6c6499e376901&chksm=971f647ba068ed6dc14fa9e77e9f202b47462b16e293b892a023b68bf8af4f43e4caa8ba604c&mpshare=1&scene=1&srcid=0214VqAdFOzHQSvuXBuQKOsA&key=21fc19b7b481fbcf0830b8fadfcf7a55f97b2b15ab96ee7cf649190f3bed2849688ae4dd586871b50a20eca182379896303ceab519a86349db14af87d8bdb9fd92f8b2aac6213970a4ca526f4126bae5&ascene=0&uin=MTYwNDEzNzA2MA%3D%3D&devicetype=iMac+MacBookPro8%2C1+OSX+OSX+10.10.5+build(14F27)&version=11020201&pass_ticket=XbwCAouw%2FsU0HIKRDoTtGooaP8yxOVSSqmstdwB3c1g%2Fv6tMfRyO65WD8qUWFyZO">
+            <div class="time-line">
+                <div class="time-line-circle"></div>
+                <div class="time-line-line"></div>
+                <!-- 时间线内容区 -->
+                <div class="time-line-info">
+                    <p class="time-line-title">如何缓解自然分娩的疼痛？专家教你这样做......</p>
+                    <img src="../images/pk/71.png" alt="" class="time-line-img">
+                </div>
+            </div>
+        </a>
+        <a href="https://mp.weixin.qq.com/s?__biz=MzIyNzUzNTY5MA==&mid=2247483709&idx=2&sn=5fda8db4a822dd0103329cfa590f78f0&chksm=e85eff18df29760e2ad4820444703b473fe69ace1b08261b5b7549513f35f8abda094c8af8ce&scene=0&key=e1b6773aeed661bf3ad4304a8c8682a785f3aed871520bf5b0a3d757aabd3fe9009735f6c5092993c051d4485437d9f8e630698775c34651dfaa29f927e8175c2e80018051ae1784ef88e007b020ee5d&ascene=0&uin=MTYwNDEzNzA2MA%3D%3D&devicetype=iMac+MacBookPro8%2C1+OSX+OSX+10.10.5+build(14F27)&version=11020201&pass_ticket=XbwCAouw%2FsU0HIKRDoTtGooaP8yxOVSSqmstdwB3c1g%2Fv6tMfRyO65WD8qUWFyZO">
+            <div class="time-line">
+                <div class="time-line-circle"></div>
+                <div class="time-line-line"></div>
+                <!-- 时间线内容区 -->
+                <div class="time-line-info">
+                    <p class="time-line-title">比起剖腹产，自然分娩的好处在哪里？</p>
+                    <img src="../images/pk/75.png" alt="" class="time-line-img">
+                </div>
+            </div>
+        </a>
+        <a href="https://mp.weixin.qq.com/s?__biz=MzIyNzUzNTY5MA==&mid=2247483709&idx=3&sn=2be8b2a0dfef8a6ff17609a6516b7151&chksm=e85eff18df29760e2dad33094f0e885788045bd6a87a98fce2c0ff8938a23702d5308f122db1&scene=0&key=dde62796d24517c8b2b7e39c1727d0b1a1f19d50a9433a8316c04affd1d1b52e01f1a87edecf4284689720810bef4f6afc0430175a3b37fcc13a0791b1d0fcc6ff22a67698643c5596862925adfb6d23&ascene=0&uin=MTYwNDEzNzA2MA%3D%3D&devicetype=iMac+MacBookPro8%2C1+OSX+OSX+10.10.5+build(14F27)&version=11020201&pass_ticket=XbwCAouw%2FsU0HIKRDoTtGooaP8yxOVSSqmstdwB3c1g%2Fv6tMfRyO65WD8qUWFyZO">
+            <div class="time-line">
+                <div class="time-line-circle"></div>
+                <div class="time-line-line"></div>
+                <!-- 时间线内容区 -->
+                <div class="time-line-info">
+                    <p class="time-line-title">【分娩必备】拉玛泽呼吸法！</p>
+                    <img src="../images/pk/76.png" alt="" class="time-line-img">
+                </div>
+            </div>
+
+            <a href="https://mp.weixin.qq.com/s?__biz=MzIyNzUzNTY5MA==&mid=2247483709&idx=4&sn=4f703a8186ce1db83b19f296d22abad4&chksm=e85eff18df29760eea73ad791568faf72e1f6add36f427e0b34ad2bb52af31db065094f3e6d6&scene=0&key=dde62796d24517c80ecbcd297639d4f27c692be8d8db2a9611aceafb1a0ed931c57e9dce047e0765b90311a4dc4859855c4f3c08f952a9d84cb54f8578d850279baa3a9a40fd5eef1ecf62db0cf285ec&ascene=0&uin=MTYwNDEzNzA2MA%3D%3D&devicetype=iMac+MacBookPro8%2C1+OSX+OSX+10.10.5+build(14F27)&version=11020201&pass_ticket=XbwCAouw%2FsU0HIKRDoTtGooaP8yxOVSSqmstdwB3c1g%2Fv6tMfRyO65WD8qUWFyZO">
+                <div class="time-line">
+                    <div class="time-line-circle"></div>
+                    <div class="time-line-line"></div>
+                    <!-- 时间线内容区 -->
+                    <div class="time-line-info">
+                        <p class="time-line-title">自然分娩你准备好了吗？</p>
+                        <img src="../images/pk/77.png" alt="" class="time-line-img">
+                    </div>
+                </div>
+            </a>
+            <a href="https://mp.weixin.qq.com/s?__biz=MzIyNzUzNTY5MA==&mid=2247483709&idx=5&sn=42687d257d5bd5c54007d9a56ac8904a&chksm=e85eff18df29760ec046e427c96079da4cb2746556c8818909a58b80ccce8c91ed82f56e85f4&scene=0&key=21fc19b7b481fbcf27c3eb9be0a5fcf8500e6bfa1ead3e7b85a8d52823c0ccb6a164843b3dcf4ea0f6a368f037652b4b79af70fc7735bdae9a2ac0ae2783a6cbc053cd8ca4fe7db49d9c16ff6bb8a043&ascene=0&uin=MTYwNDEzNzA2MA%3D%3D&devicetype=iMac+MacBookPro8%2C1+OSX+OSX+10.10.5+build(14F27)&version=11020201&pass_ticket=XbwCAouw%2FsU0HIKRDoTtGooaP8yxOVSSqmstdwB3c1g%2Fv6tMfRyO65WD8qUWFyZO">
+                <div class="time-line">
+                    <div class="time-line-circle"></div>
+                    <div class="time-line-line"></div>
+                    <!-- 时间线内容区 -->
+                    <div class="time-line-info">
+                        <p class="time-line-title">【分娩前后】想要顺产？看完这个就放心了！</p>
+                        <img src="../images/pk/78.png" alt="" class="time-line-img">
+                    </div>
+                </div>
+            </a>
+    </div>
+
+
+</body>
+
+</html>

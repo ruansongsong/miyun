@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" href="../style/miyun.min.css" media="screen" title="no title">
+	<title>我要加群</title>
+</head>
+
+<body>
+	<div class="container">
+		<div class="join-group-intro">
+			<p>长按识别二维码</p>
+			<p>加小助理微信</p>
+			<p>带你加入“蜜孕妈妈”群</p>
+			<p>更多资讯、共同成长！</p>
+			<img src="../images/qrcode.jpg" alt="" />
+		</div>
+
+	</div>
+
+</body>
+
+</html>

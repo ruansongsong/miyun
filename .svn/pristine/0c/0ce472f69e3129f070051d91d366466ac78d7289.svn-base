@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" href="../style/miyun.min.css" media="screen" title="no title">
+	<title>营养中心</title>
+</head>
+
+<body>
+	<div class="container">
+		<div class="tab">
+			<div class="navbar navbar-top">
+				<div class="navbar-item navbar-item-on" href="#tab1">孕早期</div>
+				<div class="navbar-item" href="#tab2">孕中期</div>
+				<div class="navbar-item" href="#tab3">孕晚期</div>
+			</div>
+			<div class="banner">
+				<div class="swiper-container" data-space-between='10' data-pagination='.swiper-pagination' data-autoplay="1000">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="../images/banner1-1.png" alt=""></div>
+						<div class="swiper-slide"><img src="../images/banner1-2.png" alt=""></div>
+						<div class="swiper-slide"><img src="../images/banner1-3.png" alt=""></div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+			<div class="tab-bd">
+				<div class="tab-bd-item tab-bd-item-active fade in" id="tab1">
+					<div class="feed">
+						<ul>
+							<a href="http://mp.weixin.qq.com/s/u24YhXN4_1LjlmjTNNcXaQ">
+								<li class="feed-item">
+									<img class="feed-item-icon" src="../images/icon.svg" alt="" />
+									<p class="feed-item-title">营养均衡即可别贪多</p>
+									<img class="feed-item-image" src="../images/item1-1.png">
+								</li>
+							</a>
+							<a href="https://mp.weixin.qq.com/s/hk5yAsJa91-dmCgd5-bwjQ">
+								<li class="feed-item">
+									<img class="feed-item-icon" src="../images/icon.svg" alt="" />
+									<p class="feed-item-title">孕早期饮食的基本原则</p>
+									<img class="feed-item-image" src="../images/item1-2.png">
+								</li>
+							</a>
+							<a href="http://mp.weixin.qq.com/s/iE70mXQNtsvzCxZhpsERaw">
+								<li class="feed-item">
+									<img class="feed-item-icon" src="../images/icon.svg" alt="" />
+									<p class="feed-item-title">喜食酸辣也要适可而止</p>
+									<img class="feed-item-image" src="../images/item1-3.png">
+								</li>
+							</a>
+							<a href="http://mp.weixin.qq.com/s/3bE3li2GVfbibLZuKimDzg">
+								<li class="feed-item">
+									<img class="feed-item-icon" src="../images/icon.svg" alt="" />
+									<p class="feed-item-title">孕期想补充营养，保健品到底能不能吃？
+									<img class="feed-item-image" src="../images/item1-4.png">
+									</li>
+							</a>
+						</ul>
+					</div>
+				</div>
+				<div class="tab-bd-item" id="tab2" >
+					<div class="feed">
+						<ul>
+							<a href="https://mp.weixin.qq.com/s/f34RswEWkfB-uoCRxamtAA">
+								<li class="feed-item">
+									<img class="feed-item-icon" src="../images/icon.svg" alt="" />
+									<p class="feed-item-title">8种果蔬最适合准妈妈</p>
+									<img class="feed-item-image" src="../images/item1-9.png">
+								</li>
+							</a>
+							<a href="http://mp.weixin.qq.com/s/A4YA_vMpsh2KYSaIgs_zuQ">
+								<li class="feed-item">
+									<img class="feed-item-icon" src="../images/icon.svg" alt="" />
+									<p class="feed-item-title">想和垃圾食品说再见，需要先认清它们</p>
+									<img class="feed-item-image" src="../images/item1-10.png">
+								</li>
+							</a>
+							<a href="http://mp.weixin.qq.com/s/XZQpTFrmuV9uhYCqN0BTCg">
+								<li class="feed-item">
+									<img class="feed-item-icon" src="../images/icon.svg" alt="" />
+									<p class="feed-item-title">食补维生素最靠谱</p>
+									<img class="feed-item-image" src="../images/item1-11.png">
+								</li>
+							</a>
+							<a href="http://mp.weixin.qq.com/s/UuoLlqX-yP6sF7RZ-OTmYQ">
+								<li class="feed-item">
+									<img class="feed-item-icon" src="../images/icon.svg" alt="" />
+									<p class="feed-item-title">调整饮食主动出击，积极预防妊娠高血压</p>
+									<img class="feed-item-image" src="../images/item1-12.png">
+								</li>
+							</a>
+						</ul>
+					</div>
+				</div>
+				<div class="tab-bd-item" id="tab3">
+					<div class="feed">
+						<ul>
+							<a href="https://mp.weixin.qq.com/s/7MDN0qbSYANBO5XQmOVgRA">
+								<li class="feed-item">
+									<img class="feed-item-icon" src="../images/icon.svg" alt="" />
+									<p class="feed-item-title">庞大的维生素家族，孕期该补充哪一种？</p>
+									<img class="feed-item-image" src="../images/item1-6.png">
+								</li>
+							</a>
+							<a href="http://mp.weixin.qq.com/s/6Bb3NiFgXMGf5x5sPwIOsQ">
+								<li class="feed-item">
+									<img class="feed-item-icon" src="../images/icon.svg" alt="" />
+									<p class="feed-item-title">孕晚期，一定要注意控制糖类的摄入量</p>
+									<img class="feed-item-image" src="../images/item1-7.png">
+								</li>
+							</a>
+							<a href="http://mp.weixin.qq.com/s/jdHEi2oHb5drlduhDhpGJA">
+								<li class="feed-item">
+									<img class="feed-item-icon" src="../images/icon.svg" alt="" />
+									<p class="feed-item-title">少食多餐帮你减轻不适</p>
+									<img class="feed-item-image" src="../images/item1-8.png">
+								</li>
+							</a>
+							<a href="http://mp.weixin.qq.com/s/_NsaynnboJOPXwLydtXOMQ">
+								<li class="feed-item">
+									<img class="feed-item-icon" src="../images/icon.svg" alt="" />
+									<p class="feed-item-title">迎接分娩，此阶段准妈妈可以这样吃！</p>
+									<img class="feed-item-image" src="../images/item1-9.png">
+								</li>
+							</a>
+							<a href="http://mp.weixin.qq.com/s/Nx-xJWDT11vj8-3saE1qzw">
+								<li class="feed-item">
+									<img class="feed-item-icon" src="../images/icon.svg" alt="" />
+									<p class="feed-item-title">孕期补对蛋白质，让你产后哺乳无忧！</p>
+									<img class="feed-item-image" src="../images/item1-10.png">
+								</li>
+							</a>
+							<a href="http://mp.weixin.qq.com/s/xmMldD9AndMJ986CmCL-pg">
+								<li class="feed-item">
+									<img class="feed-item-icon" src="../images/icon.svg" alt="" />
+									<p class="feed-item-title">如果说妊娠期糖尿病可能会影响胎儿大脑，你还任性胡吃海喝不！</p>
+									<img class="feed-item-image" src="../images/item1-11.png">
+								</li>
+							</a>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="../js/jquery-2.1.4.min.js">
+	</script>
+	<script src="../js/swiper.min.js"></script>
+	<script>
+		$(".swiper-container").swiper({
+			loop: true,
+			autoplay: 3000
+		});
+	</script>
+	<script src="../js/miyun.min.js">
+	</script>
+</body>
+
+</html>

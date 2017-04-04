@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="../style/miyun.min.css" media="screen" title="no title">
+    <title>我要问</title>
+</head>
+<body class="body">
+    <div class="ask-header  ask-header-fixed">
+        <h1 class="ask-title">孕期有疑问 快速问医生</h1>
+        <a href="./switch-doctor-to-ask.html" class="ask-button">我要问</a>
+        <div class="ask-own">
+            <a href="./my-question-list.html">我的提问</a>
+        </div>
+    </div>
+    <div class="ask-body-wrap">
+        <div class="component-title">问题列表</div>
+        <div class="ask-body" id="questions">
+        </div>
+    </div>
+
+    <script src="../js/jquery-2.1.4.min.js"></script>
+    <script src="../js/api.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $.ajax({
+                "url" : "../../Services/MedicalCare.ashx?action=allquestions",
+                "type" : "POST",
+                "dataType" : "json",
+                "data":{
+                    "userweixinid":getUrlParam("userid")
+                },
+                "success" : function (questionList) {
+                    var toAppend = "";
+                    questionList.forEach(function(question){
+                        toAppend += "<div class=\"ask-item\">";
+                        toAppend += "<div class=\"ask-item-patient\">";
+                        toAppend += "<span class=\"ask-item-patient-name\">" + question.user + "</span>";
+                        toAppend += "<span class=\"ask-item-patient-time\">" + question.QUETIME + "</span>";
+                        toAppend += "</div>";
+                        toAppend += "<div class=\"ask-item-patient-symptom\">" + question.QUEDETAIL + "</div>";
+                        toAppend += "<div class=\"ask-item-doctor\">";
+                        toAppend += "<img src=\"" + question.docPicture + "\" class=\"ask-item-doctor-avatar\">";
+                        toAppend += "<a href=\"./pay.html\" class=\"ask-item-doctor-button\">同病相怜，1元看答案</a>";
+                        toAppend += "</div>";
+                        toAppend += "<div class=\"ask-item-doctor-name\"><span>" + question.docName + "</span>  <span>" + question.isAnswered + "</span></div>";
+                        toAppend += "<div class=\"ask-item-doctor-meta\">";
+                        toAppend += "<div class=\"ask-item-doctor-meta-detail\">";
+                        toAppend += "<span>" + question.docHospital + "</span> <span>" + question.docTitle + "</span>";
+                        toAppend += "</div>";
+                        toAppend += "<div class=\"ask-item-doctor-meta-like\">" + question.likeCount + "位妈妈</div>"
+                        toAppend += "</div>"
+                        toAppend += "</div>"
+                    });
+                    $('#questions').append(toAppend)
+                },
+                "error":function () {
+                }
+            });
+        });
+    </script>
+</body>
+</html>

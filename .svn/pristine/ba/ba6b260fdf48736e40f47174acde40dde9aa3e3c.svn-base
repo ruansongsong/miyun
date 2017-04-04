@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <!--<link rel="stylesheet" href="../style/jquery-weui.min.css">-->
+    <link rel="stylesheet" type="text/css" href="../style/bbt-mobile.min.css">
+  <title>产检时间</title>
+</head>
+
+<body>
+  <div class="bm-body">
+    <div class="bm-panel">
+      <div class="bm-media-box">
+        <div class="bm-media-box-left">
+          <div class="bm-media-box-left-title">
+            第 1 次产检
+          </div>
+          <div class="bm-media-box-left-meta">
+            <span>出生</span>
+          </div>
+        </div>
+        <div class="bm-media-box-right">
+          <div class="bm-checkbox-agree">
+            <label for="check-agree-1">
+        <input type="checkbox" name="check-agree" id="check-agree-1" checked value="agree">
+        <span class="bm-checkbox-agree-icon"></span>
+      </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <form action="">
+    <div class="bm-list-title">产检时间</div>
+    <div class="bm-list">
+      
+    <div class="bm-list-body">
+      <div class="bm-list-item">
+        <div class="bm-list-item-left bm-label-short">
+          <label for="" class="">产检时间</label>
+        </div>
+        <div class="bm-list-item-right-extra bm-label-long">
+          <input type="text" class="bm-input bm-list-item-caption" id="choose-date" placeholder="请选择时间" data-toggle='date' readonly>
+        </div>
+      </div>
+            <div class="bm-list-item">
+        <div class="bm-list-item-left bm-label-short">
+          <label for="" class="">提醒时间</label>
+        </div>
+        <div class="bm-list-item-right-extra bm-label-long">
+          <input type="text" id='datetime-picker' class="bm-input bm-list-item-caption" id="choose-date" placeholder="请选择时间" data-toggle='date' readonly>
+        </div>
+      </div>
+    </div>
+    <div class="bm-btn-area">
+      <button class="bm-btn bm-btn-primary" id="set-date">设置</button>
+    </div>
+    </form>
+    <div class="bm-list-title">检查项目</div>
+    <p class="bm-media-box-intro">蜜孕特别为准妈妈整理出一份详尽的孕产时间检查表，叮咛准妈妈按时进行各项检查，以确保母体和胎儿的健康，帮助你度过难忘的 280 天！</p>
+    <div class="bm-list-title">产检说明`</div>
+    <p class="bm-media-box-intro">蜜孕特别为准妈妈整理出一份详尽的孕产时间检查表，叮咛准妈妈按时进行各项检查，以确保母体和胎儿的健康，帮助你度过难忘的 280 天！</p>
+    </div>
+  </div>
+  <script src="../js/jquery-2.1.4.min.js"></script>
+  <script src="../js/jquery-weui.min.js"></script>
+  <script>
+    $("#choose-date").calendar();
+    $("#datetime-picker").datetimePicker();
+  </script>
+  <script>
+    var button = document.querySelector('#set-date');
+    button.onclick = function() {
+      console.log(document.querySelector('#choose-date').value);
+    }
+  </script>
+</body>
+
+</html>
