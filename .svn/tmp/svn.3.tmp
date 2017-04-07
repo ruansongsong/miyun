@@ -8,7 +8,6 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link rel="stylesheet" href="../style/miyun.min.css" media="screen" title="no title">
-    <link rel="stylesheet" href="../style/bbt-mobile.min.css">
 	<link rel="stylesheet" href="../style/weui.min.css" media="screen" title="no title">
 	<script src="../js/weui.min.js"></script>
     <title>我要问</title>
@@ -48,14 +47,6 @@
                 </div>
             </div>
         </div> 
-    <div class="bm-checkbox-agree">
-      <label for="check-agree">
-        <input type="checkbox" name="check-agree" id="check-agree" checked value="agree">
-        <span class="bm-checkbox-agree-icon"></span>
-        <span class="bm-checkbox-agree-title">已同意</span>
-      </label>
-      <a href="javascript:;" class="open-popup" data-target="#duty-detail">免责声明</a>
-    </div>
 
         <div class="ask-price" id ="Price">
             <div style="text-decoration:line-through;display:inline-block;">￥9.9</div><div style="display:inline-block;">￥0.99</div>
@@ -65,26 +56,7 @@
         </div>
 
     </div>
-      <div id="duty-detail" class="weui-popup__container">
-    <div class="weui-popup__overlay"></div>
-    <div class="weui-popup__modal">
-      <article class="weui-article">
-        <h1 class="weui-article-title">责任声明</h1>
-        <section>
-          <section>
-            <p>
-              “问医生”的相关回答仅为该答主在医疗、卫生、健康等领域的个人经验、意见或观点，不能被自动视为该答主供职医院和单位/机构的意见或观点，仅供用户参考所用，亦不能认为是医嘱、诊断证明、或其他类似性质的文件。 如您和宝宝有问诊需求，“蜜孕”平台请您务必前往正规医院进行就诊。“蜜孕”平台对解答内容不予担保，对在“蜜孕”平台之外所进行的任何行为后果亦不予承担责任。
-              请知悉，谢谢！
-            </p>
-          </section>
-        </section>
-      </article>
-      <div class="bm-btn-area"><a href="javascript:;" class="bm-btn bm-btn-primary close-popup">关闭</a></div>
-
-    </div>
-  </div>
     <script src="../js/jquery-2.1.4.min.js"></script>
-    <script src="../js/jquery-weui.min.js"></script>
     <script src="../js/api.js"></script>
     <script type="text/javascript">
         var textarea = document.getElementById('textarea-length');
@@ -200,12 +172,6 @@
             }
         }
         document.getElementById("uploaderCustomBtn").addEventListener('click', function () {
-            // 判断是否选中阅读声明
-            var check = document.querySelector('#check-agree');
-            if(check.checked == false) {
-                weui.alert('请阅读免责声明并勾选表示同意该声明');
-                return false;
-            }
             this.setAttribute('disabled', 'true');
             this.classList.add('ask-btn-disabled');
             button.innerHTML = '提交中';

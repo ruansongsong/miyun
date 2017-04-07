@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="zh-cmn-Hans">
-
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -9,14 +8,10 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link rel="stylesheet" href="../style/miyun.min.css" media="screen" title="no title">
-    <link rel="stylesheet" href="../style/bbt-mobile.min.css">
-
     <link rel="stylesheet" href="../style/weui.min.css" media="screen" title="no title">
-
     <script src="../js/weui.min.js"></script>
     <title>提问医生</title>
 </head>
-
 <body class="body">
     <div class="weui-tab__panel">
         <div class="ask-header">
@@ -29,7 +24,7 @@
                     </div>
                 </div>
             </form>
-        </div>
+        </div> 
         <div class="weui-cells weui-cells_form" id="uploaderCustom">
             <div class="weui-cell">
                 <div class="weui-cell__bd">
@@ -47,40 +42,14 @@
                 </div>
             </div>
         </div>
-        <div class="bm-checkbox-agree">
-            <label for="check-agree">
-        <input type="checkbox" name="check-agree" id="check-agree" checked value="agree">
-        <span class="bm-checkbox-agree-icon"></span>
-        <span class="bm-checkbox-agree-title">已同意</span>
-      </label>
-            <a href="javascript:;" class="open-popup" data-target="#duty-detail">免责声明</a>
-        </div>
         <div class="ask-price">￥10.00</div>
         <div class="ask-btn-area">
-            <button id="uploaderCustomBtn" type="button" class="ask-btn-primary">我要问</button>
+            <button id="uploaderCustomBtn" type="button" class="ask-btn-primary"  >我要问</button>
         </div>
     </div>
-    <div id="duty-detail" class="weui-popup__container">
-        <div class="weui-popup__overlay"></div>
-        <div class="weui-popup__modal">
-            <article class="weui-article">
-                <h1 class="weui-article-title">责任声明</h1>
-                <section>
-                    <section>
-                        <p>
-                            “问医生”的相关回答仅为该答主在医疗、卫生、健康等领域的个人经验、意见或观点，不能被自动视为该答主供职医院和单位/机构的意见或观点，仅供用户参考所用，亦不能认为是医嘱、诊断证明、或其他类似性质的文件。 如您和宝宝有问诊需求，“蜜孕”平台请您务必前往正规医院进行就诊。“蜜孕”平台对解答内容不予担保，对在“蜜孕”平台之外所进行的任何行为后果亦不予承担责任。
-                            请知悉，谢谢！
-                        </p>
-                    </section>
-                </section>
-            </article>
-            <div class="bm-btn-area"><a href="javascript:;" class="bm-btn bm-btn-primary close-popup">关闭</a></div>
 
-        </div>
-    </div>
     <script src="../js/jquery-2.1.4.min.js"></script>
     <script src="../js/api.js"></script>
-    <script src="../js/jquery-weui.min.js"></script>
     <script type="text/javascript">
         var textarea = document.getElementById('textarea-length');
         var counter = document.getElementById('counter');
@@ -88,6 +57,7 @@
         textarea.addEventListener('input', function () {
             counter.innerText = textarea.value.length;
         })
+
     </script>
     <script>
         var button = document.querySelector('#uploaderCustomBtn');
@@ -104,12 +74,6 @@
             }
         }
         document.getElementById("uploaderCustomBtn").addEventListener('click', function () {
-            // 判断是否选中阅读声明
-            var check = document.querySelector('#check-agree');
-            if(check.checked == false) {
-                weui.alert('请阅读免责声明并勾选表示同意该声明');
-                return false;
-            }
             // 添加文件到formdata
             Object.keys(fileLists).forEach(function (item) {
                 formData.append(item, fileLists[item]);
@@ -129,10 +93,7 @@
                     button.innerHTML = '提交成功';
                     var hJson = xhr.responseText;
                     var parsedJson = jQuery.parseJSON(hJson);
-                    window.location =
-                        "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx2500d73cdacd7fa6&redirect_uri=http%3A%2F%2Fwww.bestmiyun.com%2Fmiyun%2Fpatient%2Fpay.html%3fQueId%3d" +
-                        parsedJson.queId +
-                        "&response_type=code&scope=snsapi_base&state=123#wechat_redirect";
+                    window.location = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx2500d73cdacd7fa6&redirect_uri=http%3A%2F%2Fwww.bestmiyun.com%2Fmiyun%2Fpatient%2Fpay.html%3fQueId%3d" + parsedJson.queId + "&response_type=code&scope=snsapi_base&state=123#wechat_redirect";
                 }
             }
 
@@ -193,7 +154,6 @@
         textarea.addEventListener('input', function () {
             counter.innerText = textarea.value.length;
         })
-    </script>
+	</script>
 </body>
-
 </html>

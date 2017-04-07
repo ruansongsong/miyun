@@ -13,33 +13,6 @@
 </head>
 <body class="body">
     <div class="weui-tab__panel">
-<<<<<<< .mine
-        <div class="component-title">问题</div>
-        <div class="ask-body" id="question">
-            <p class="question-detail"><span>问题：</span>怀孕5个月， 腰酸背痛，是什么原因？</p>
-            <p class="question-detail"><span>回答：</span>我不知道</p>
-        </div>
-        <div class="component-title">追问</div>
-        <div id="mpre-question">
-            <div class="ask-body" id="question">
-                <p class="question-detail">追问1</p>
-            </div>
-            <div class="ask-body" id="question">
-                <p class="question-detail">追问2</p>
-            </div>
-        </div>
-
-        <p class="weui-cells__title">查看图片</p>
-        <div class="weui-cells weui-cells_form" id="questionImage">
-            <div class="weui-cell">
-                <div class="weui-cell__bd">
-                    <div class="weui-uploader">
-                        <div class="weui-uploader__bd" id="shotcutview">
-                            <ul class="weui-uploader__files" id="questionImageShortCut">
-                                <li class="weui-uploader__file" data-id="1" style="background-image: url('../../Services/upload/20170321/003737124/IMG_0480.JPG');"></li>
-                            </ul>
-                        </div>
-=======
     <div class="component-title">问题</div>
     <div class="ask-body" id="question">
         <p class="question-detail">怀孕5个月， 腰酸背痛，是什么原因？</p>
@@ -54,7 +27,6 @@
                         <ul class="weui-uploader__files" id="questionImageShortCut">
                             <li class="weui-uploader__file" data-id="1" style="background-image: url('../../Services/upload/20170321/003737124/IMG_0480.JPG');"></li>
                         </ul>
->>>>>>> .r274
                     </div>
                 </div>
             </div>

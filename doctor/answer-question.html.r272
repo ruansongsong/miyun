@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-cmn-Hans">
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -8,16 +9,15 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link rel="stylesheet" href="../style/miyun.min.css" media="screen" title="no title">
-    <link rel="stylesheet" href="../style/weui.min.css" media="screen" title="no title"> 
+    <link rel="stylesheet" href="../style/weui.min.css" media="screen" title="no title">
     <title>回答</title>
 </head>
+
 <body class="body">
     <div class="weui-tab__panel">
-<<<<<<< .mine
         <div class="component-title">问题</div>
         <div class="ask-body" id="question">
-            <p class="question-detail"><span>问题：</span>怀孕5个月， 腰酸背痛，是什么原因？</p>
-            <p class="question-detail"><span>回答：</span>我不知道</p>
+            <p class="question-detail">怀孕5个月， 腰酸背痛，是什么原因？</p>
         </div>
         <div class="component-title">追问</div>
         <div id="mpre-question">
@@ -39,61 +39,44 @@
                                 <li class="weui-uploader__file" data-id="1" style="background-image: url('../../Services/upload/20170321/003737124/IMG_0480.JPG');"></li>
                             </ul>
                         </div>
-=======
-    <div class="component-title">问题</div>
-    <div class="ask-body" id="question">
-        <p class="question-detail">怀孕5个月， 腰酸背痛，是什么原因？</p>
-    </div>
-    
-    <p class="weui-cells__title">查看图片</p>
-    <div class="weui-cells weui-cells_form" id="questionImage">
-        <div class="weui-cell">
-            <div class="weui-cell__bd">
-                <div class="weui-uploader">
-                    <div class="weui-uploader__bd" id="shotcutview">
-                        <ul class="weui-uploader__files" id="questionImageShortCut">
-                            <li class="weui-uploader__file" data-id="1" style="background-image: url('../../Services/upload/20170321/003737124/IMG_0480.JPG');"></li>
-                        </ul>
->>>>>>> .r274
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="component-title">回答</div>
-    <div class="ask-body">
-        <form action="answerquestion">
-            <div class="ask-detail">
-                <textarea id="textarea-length" class="ask-detail-textarea" rows="8" maxlength="200" placeholder="请输入你的回答"></textarea>
-                <div class="ask-detail-meta">
-                    <div class="ask-detail-counter"><span id="counter">0</span>/200</div>
-                </div>
-            </div>
-        </form>
-    </div>
-
-    <p class="weui-cells__title">上传图片</p>
-    <div class="weui-cells weui-cells_form" id="uploaderCustom">
-        <div class="weui-cell">
-            <div class="weui-cell__bd">
-                <div class="weui-uploader">
-                    <div class="weui-uploader__hd">
-                        <p class="weui-uploader__title">请选择图片</p>
+        <div class="component-title">回答</div>
+        <div class="ask-body">
+            <form action="answerquestion">
+                <div class="ask-detail">
+                    <textarea id="textarea-length" class="ask-detail-textarea" rows="8" maxlength="200" placeholder="请输入你的回答"></textarea>
+                    <div class="ask-detail-meta">
+                        <div class="ask-detail-counter"><span id="counter">0</span>/200</div>
                     </div>
-                    <div class="weui-uploader__bd">
-                        <ul class="weui-uploader__files" id="uploaderCustomFiles"></ul>
-                        <div class="weui-uploader__input-box">
-                            <input id="uploaderCustomInput" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+                </div>
+            </form>
+        </div>
+
+        <p class="weui-cells__title">上传图片</p>
+        <div class="weui-cells weui-cells_form" id="uploaderCustom">
+            <div class="weui-cell">
+                <div class="weui-cell__bd">
+                    <div class="weui-uploader">
+                        <div class="weui-uploader__hd">
+                            <p class="weui-uploader__title">请选择图片</p>
+                        </div>
+                        <div class="weui-uploader__bd">
+                            <ul class="weui-uploader__files" id="uploaderCustomFiles"></ul>
+                            <div class="weui-uploader__input-box">
+                                <input id="uploaderCustomInput" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div> 
-    <div class="ask-btn-area">
-        <button id="uploaderCustomBtn"   type="button" class="ask-btn-primary"  >提交</button>
-    </div>
+        <div class="ask-btn-area">
+            <button id="uploaderCustomBtn" type="button" class="ask-btn-primary">提交</button>
+        </div>
     </div>
     <script src="../js/jquery-2.1.4.min.js"></script>
     <script src="../js/api.js"></script>
@@ -113,28 +96,33 @@
                     $('#question').html("");
                     $('#question').append(toAppend);
 
-                    var dutViewInnerHtml = " <ul class=\"weui-uploader__files\" id=\"questionImageShortCut\">";
+                    var dutViewInnerHtml =
+                        " <ul class=\"weui-uploader__files\" id=\"questionImageShortCut\">";
                     for (var i = 0; i < question.imageUrls.length; i++) {
-                        dutViewInnerHtml = dutViewInnerHtml + " <li class=\"weui-uploader__file\" data-id=\"" + i + "\" style=\"background-image: url('" + question.imageUrls[i] + "');\"></li>";
+                        dutViewInnerHtml = dutViewInnerHtml +
+                            " <li class=\"weui-uploader__file\" data-id=\"" + i +
+                            "\" style=\"background-image: url('" + question.imageUrls[i] +
+                            "');\"></li>";
                     }
                     document.getElementById("shotcutview").innerHTML = dutViewInnerHtml + "</ul>";
 
 
-                    document.querySelector('#questionImageShortCut').addEventListener('click', function (e) {
-                        var target = e.target;
-                        while (!target.classList.contains('weui-uploader__file') && target) {
-                            target = target.parentNode;
-                        }
-                        if (!target) return;
-                        var url = target.getAttribute('style') || '';
-                        var id = target.getAttribute('data-id');
-                        if (url) {
-                            url = url.match(/url\((.*?)\)/)[1];
-                            var gallery = weui.gallery(url);
-                            console.log(url);
-                        }
+                    document.querySelector('#questionImageShortCut').addEventListener('click',
+                        function (e) {
+                            var target = e.target;
+                            while (!target.classList.contains('weui-uploader__file') && target) {
+                                target = target.parentNode;
+                            }
+                            if (!target) return;
+                            var url = target.getAttribute('style') || '';
+                            var id = target.getAttribute('data-id');
+                            if (url) {
+                                url = url.match(/url\((.*?)\)/)[1];
+                                var gallery = weui.gallery(url);
+                                console.log(url);
+                            }
 
-                    });
+                        });
                 }
             });
         });
@@ -168,7 +156,8 @@
             xhr.onload = function () {
                 if (xhr.readyState == 4 && xhr.status == 200) {
                     button.innerHTML = '提交成功';
-                    window.location = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx2500d73cdacd7fa6&redirect_uri=http%3A%2F%2Fwww.bestmiyun.com%2Fmiyun%2Fdoctor%2Fhome.html&response_type=code&scope=snsapi_base&state=123#wechat_redirect";
+                    window.location =
+                        "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx2500d73cdacd7fa6&redirect_uri=http%3A%2F%2Fwww.bestmiyun.com%2Fmiyun%2Fdoctor%2Fhome.html&response_type=code&scope=snsapi_base&state=123#wechat_redirect";
                 }
             }
 
@@ -231,4 +220,5 @@
         })
     </script>
 </body>
+
 </html>

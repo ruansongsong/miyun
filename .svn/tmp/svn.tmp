@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-cmn-Hans">
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -8,11 +9,12 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link rel="stylesheet" href="../style/miyun.min.css" media="screen" title="no title">
-    <link rel="stylesheet" href="../style/bbt-mobile.min.css">
-	<link rel="stylesheet" href="../style/weui.min.css" media="screen" title="no title">
-	<script src="../js/weui.min.js"></script>
+        <link rel="stylesheet" href="../style/bbt-mobile.min.css">
+    <link rel="stylesheet" href="../style/weui.min.css" media="screen" title="no title">
+    <script src="../js/weui.min.js"></script>
     <title>我要问</title>
 </head>
+
 <body class="body">
     <div class="weui-tab__panel">
 
@@ -20,16 +22,16 @@
             <h1 class="ask-title">孕期有疑问 快速问医生</h1>
             <form action="">
                 <div class="ask-detail">
-                    <textarea id="textarea-length" class="ask-detail-textarea" rows="8" maxlength="200" placeholder="问题描述，可附带检查报告及症状示意图。为了更好的解答妈妈们的疑问，请说明孕几周、妈妈年龄、宝宝月龄、过往病史等，信息尽可能详细"></textarea>
-                    <div class="ask-detail-meta"> 
+                    <textarea id="textarea-length" class="ask-detail-textarea" rows="8" maxlength="200" placeholder="问题描述，可附带检查报告及症状示意图,为了增加回复准确性, 请先说明准妈妈年龄、孕周和相关病史，或宝宝月龄、性别和相关病史等。详细描述症状， 可上传检查报告或清晰图片以帮助医生判断。"></textarea>
+                    <div class="ask-detail-meta">
                         <div class="ask-detail-counter"><span id="counter">0</span>/200</div>
                     </div>
 
                 </div>
             </form>
         </div>
-        <input type="hidden" id="openid" value=""/> 
-        <input type="hidden" id="queid" value=""/> 
+        <input type="hidden" id="openid" value="" />
+        <input type="hidden" id="queid" value="" />
         <p class="weui-cells__title">上传图片</p>
         <div class="weui-cells weui-cells_form" id="uploaderCustom">
             <div class="weui-cell">
@@ -41,51 +43,47 @@
                         <div class="weui-uploader__bd">
                             <ul class="weui-uploader__files" id="uploaderCustomFiles"></ul>
                             <div class="weui-uploader__input-box">
-                                <input id="uploaderCustomInput" name="uploaderCustomInput" class="weui-uploader__input" type="file" accept="image/*"  multiple="">
+                                <input id="uploaderCustomInput" name="uploaderCustomInput" class="weui-uploader__input" type="file" accept="image/*" multiple="">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div> 
-    <div class="bm-checkbox-agree">
-      <label for="check-agree">
+        </div>
+        <div class="bm-checkbox-agree">
+            <label for="check-agree">
         <input type="checkbox" name="check-agree" id="check-agree" checked value="agree">
         <span class="bm-checkbox-agree-icon"></span>
         <span class="bm-checkbox-agree-title">已同意</span>
       </label>
-      <a href="javascript:;" class="open-popup" data-target="#duty-detail">免责声明</a>
-    </div>
-
-        <div class="ask-price" id ="Price">
-            <div style="text-decoration:line-through;display:inline-block;">￥9.9</div><div style="display:inline-block;">￥0.99</div>
+            <a href="javascript:;" class="open-popup" data-target="#duty-detail">责任声明</a>
         </div>
+        <div class="ask-price" id="Price">￥0.01</div>
         <div class="ask-btn-area">
-            <button id="uploaderCustomBtn" type="button" class="ask-btn-primary" >我要问</button>
+            <button id="uploaderCustomBtn" type="button" class="ask-btn-primary">我要问</button>
         </div>
 
     </div>
-      <div id="duty-detail" class="weui-popup__container">
-    <div class="weui-popup__overlay"></div>
-    <div class="weui-popup__modal">
-      <article class="weui-article">
-        <h1 class="weui-article-title">责任声明</h1>
-        <section>
-          <section>
-            <p>
-              “问医生”的相关回答仅为该答主在医疗、卫生、健康等领域的个人经验、意见或观点，不能被自动视为该答主供职医院和单位/机构的意见或观点，仅供用户参考所用，亦不能认为是医嘱、诊断证明、或其他类似性质的文件。 如您和宝宝有问诊需求，“蜜孕”平台请您务必前往正规医院进行就诊。“蜜孕”平台对解答内容不予担保，对在“蜜孕”平台之外所进行的任何行为后果亦不予承担责任。
-              请知悉，谢谢！
-            </p>
-          </section>
-        </section>
-      </article>
-      <div class="bm-btn-area"><a href="javascript:;" class="bm-btn bm-btn-primary close-popup">关闭</a></div>
-
+    <div id="duty-detail" class="weui-popup__container">
+        <div class="weui-popup__overlay"></div>
+        <div class="weui-popup__modal">
+            <article class="weui-article">
+                <h1 class="weui-article-title">责任声明</h1>
+                <section>
+                    <section>
+                        <p>
+“问医生”的相关回答仅为该答主在医疗、卫生、健康等领域的个人经验、意见或观点，不能被自动视为该答主供职医院和单位/机构的意见或观点，仅供用户参考所用，亦不能认为是医嘱、诊断证明、或其他类似性质的文件。 如您和宝宝有问诊需求，“蜜孕”平台请您务必前往正规医院进行就诊。“蜜孕”平台对解答内容不予担保，对在“蜜孕”平台之外所进行的任何行为后果亦不予承担责任。 请知悉，谢谢！
+                        </p>
+                    </section>
+                </section>
+            </article>
+            <div class="bm-btn-area"><a href="javascript:;" class="bm-btn bm-btn-primary close-popup">关闭</a></div>
+            
+        </div>
     </div>
-  </div>
     <script src="../js/jquery-2.1.4.min.js"></script>
-    <script src="../js/jquery-weui.min.js"></script>
     <script src="../js/api.js"></script>
+    <script src="../js/jquery-weui.min.js"></script>
     <script type="text/javascript">
         var textarea = document.getElementById('textarea-length');
         var counter = document.getElementById('counter');
@@ -94,11 +92,10 @@
             counter.innerText = textarea.value.length;
         })
 
-        if (getUrlParam("fatherQueID") != null)
-        {
+        if (getUrlParam("fatherQueID") != null) {
             document.getElementById("Price").innerText = '免费';
         }
-            
+
         var appId = '';
         var nonceStr = '';
         var package_ = '';
@@ -132,21 +129,21 @@
                     signType = parsedJson.signType;
                     timeStamp = parsedJson.timeStamp;
                     WeixinJSBridge.invoke('getBrandWCPayRequest', {
-                        "appId": appId,
-                        "timeStamp": timeStamp,
-                        "nonceStr": nonceStr,
-                        "package": package_,
-                        "signType": signType,
-                        "paySign": paySign
-                    },
-                    function (res) {
-                        WeixinJSBridge.log(res.err_msg);
-                        if (res.err_msg == "get_brand_wcpay_request:ok") {
-                            window.location = "./pay-success.html";
-                        } else {
-                            //document.getElementById("payFail").style.display = "block";
-                        }
-                    });
+                            "appId": appId,
+                            "timeStamp": timeStamp,
+                            "nonceStr": nonceStr,
+                            "package": package_,
+                            "signType": signType,
+                            "paySign": paySign
+                        },
+                        function (res) {
+                            WeixinJSBridge.log(res.err_msg);
+                            if (res.err_msg == "get_brand_wcpay_request:ok") {
+                                window.location = "./pay-success.html";
+                            } else {
+                                //document.getElementById("payFail").style.display = "block";
+                            }
+                        });
                 }
             });
         }
@@ -182,8 +179,6 @@
             }
             return "undefined";
         }
-
-
     </script>
     <script>
         var button = document.querySelector('#uploaderCustomBtn');
@@ -200,12 +195,6 @@
             }
         }
         document.getElementById("uploaderCustomBtn").addEventListener('click', function () {
-            // 判断是否选中阅读声明
-            var check = document.querySelector('#check-agree');
-            if(check.checked == false) {
-                weui.alert('请阅读免责声明并勾选表示同意该声明');
-                return false;
-            }
             this.setAttribute('disabled', 'true');
             this.classList.add('ask-btn-disabled');
             button.innerHTML = '提交中';
@@ -222,7 +211,7 @@
                 if (xhr.readyState == 4 && xhr.status == 200) {
                     button.innerHTML = '提交成功';
                     var hJson = xhr.responseText;
-                    var parsedJson = jQuery.parseJSON(hJson); 
+                    var parsedJson = jQuery.parseJSON(hJson);
                     document.getElementById("openid").value = parsedJson.userWeixinID;
                     document.getElementById("queid").value = parsedJson.queId;
                     $.ajax({
@@ -235,9 +224,7 @@
                         "success": function (text) {
                             if (text == '1') {
                                 window.location = "./pay-success.html";
-                            }
-                            else
-                            {
+                            } else {
                                 callpay();
                                 return false;
                             }
@@ -303,6 +290,7 @@
         textarea.addEventListener('input', function () {
             counter.innerText = textarea.value.length;
         })
-	</script>
+    </script>
 </body>
+
 </html>
