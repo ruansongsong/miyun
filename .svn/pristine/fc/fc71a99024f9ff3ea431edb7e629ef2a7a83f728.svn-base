@@ -217,7 +217,6 @@
                 j++;
             }
         }
-        
         document.getElementById("uploaderCustomBtn").addEventListener('click', function () {
             // 判断是否输入内容
             var inputValue = document.querySelector('#textarea-length').value;

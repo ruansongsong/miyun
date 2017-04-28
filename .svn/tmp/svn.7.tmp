@@ -20,7 +20,7 @@
             <h1 class="ask-title">孕期有疑问 快速问医生</h1>
             <form action="">
                 <div class="ask-detail">
-                    <textarea id="textarea-length" class="ask-detail-textarea" rows="8" maxlength="200" placeholder="为了提高回复准确性, 请先说明准妈妈年龄、孕周和相关病史，或宝宝月龄、性别和相关病史等。详细描述症状， 可上传检查报告或清晰图片以帮助医生判断。"></textarea>
+                    <textarea id="textarea-length" class="ask-detail-textarea" rows="8" maxlength="200" placeholder="问题描述，可附带检查报告及症状示意图。为了更好的解答妈妈们的疑问，请说明孕几周、妈妈年龄、宝宝月龄、过往病史等，信息尽可能详细"></textarea>
                     <div class="ask-detail-meta"> 
                         <div class="ask-detail-counter"><span id="counter">0</span>/200</div>
                     </div>
@@ -94,27 +94,9 @@
             counter.innerText = textarea.value.length;
         })
 
-        if (getUrlParam("ProductType") != null)
+        if (getUrlParam("fatherQueID") != null)
         {
-            $.ajax({
-                url: "../../Services/MedicalCare.ashx?action=getprice",
-                dataType: "html",
-                type: 'post',
-                data: {
-                    ProductType: getUrlParam("ProductType"),
-                    AddtionKey: "QUESTION",
-                    AddtionValue:getUrlParam("fatherQueID"),
-                },
-                success: function (hJson) {
-                    if (hJson == "0") {
-                        document.getElementById("Price").innerText = '免费';
-                    }
-                }
-            });
-
-
-
-            
+            document.getElementById("Price").innerText = '免费';
         }
             
         var appId = '';
