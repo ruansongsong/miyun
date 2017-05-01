@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="stylesheet" type="text/css" href="../../style/bbt-mobile.min.css">
+  <title>医生详情</title>
+</head>
+
+<body>
+  <div class="bm-tabbar-panel">
+    <div class="personal-center">
+      <img src="../../images/ask/avatar.jpg" alt="头像" class="personal-avatar">
+      <div class="personal-main">
+        <p class="personal-name">吴美宝</p>
+        <p class="personal-detail">广州市妇婴医院 主治医师</p>
+        <p class="personal-tags"><span class="bm-tag">围产</span><span class="bm-tag">孕期营养</span></p>
+        <div class="personal-meta">
+          <div class="personal-meta-item">问诊899</div>
+          <div class="personal-meta-item">粉丝255</div>
+        </div>
+      </div>
+    </div>
+    <div class="bm-list-title">简介</div>
+    <p class="personal-intro">
+      女，主任医师，教授，硕士研究生导师，享受国务院 女，主任医师，教授，硕士研究生导师，享受国务院
+    </p>
+    <div class="bm-list-title">擅长</div>
+    <p class="personal-intro">
+      女，主任医师，教授，硕士研究生导师，享受国务院 女，主任医师，教授，硕士研究生导师，享受国务院
+    </p>
+    <div class="bm-list-title">医生回答</div>
+    <div class="miyun-qa-list">
+      <div class="miyun-qa-item">
+        <div class="miyun-qa-item-time">2017-3-04 11:59</div>
+        <div class="miyun-qa-item-question">头痛怎么办头痛怎么办头痛怎么办头痛怎么办头痛怎么办头痛怎么办头痛怎么办头痛怎么办头痛怎么办</div>
+        <div class="miyun-qa-item-answer">
+          <div class="miyun-qa-item-answer-left">
+            <div class="doctor-avatar">
+              <img src="../../images/ask/avatar.jpg" alt="医生头像">
+              <p>美宝</p>
+            </div>
+          </div>
+          <div class="miyun-qa-item-answer-right">
+            <div class="listen-answer">
+              <div class="listen-answer-left">
+                <div class="listen-answer-left-icon"> </div>
+                <div class="listen-answer-left-title">一元听答案</div>
+              </div>
+              <div class="listen-answer-right">60'</div>
+            </div>
+            <div class="miyun-qa-item-meta">
+              <div class="listened">2人听过</div>
+              <div class="useful">100人觉得有用</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="miyun-qa-item">
+        <div class="miyun-qa-item-time">2017-3-04 11:59</div>
+        <div class="miyun-qa-item-question">头痛怎么办头痛怎么办头痛怎么办头痛怎么办头痛怎么办头痛怎么办头痛怎么办头痛怎么办头痛怎么办</div>
+        <div class="miyun-qa-item-answer">
+          <div class="miyun-qa-item-answer-left">
+            <div class="doctor-avatar">
+              <img src="../../images/ask/avatar.jpg" alt="医生头像">
+              <p>美宝</p>
+            </div>
+          </div>
+          <div class="miyun-qa-item-answer-right">
+            <div class="listen-answer">
+              <div class="listen-answer-left">
+                <div class="listen-answer-left-icon"></div>
+                <div class="listen-answer-left-title">一元听答案</div>
+              </div>
+              <div class="listen-answer-right">60'</div>
+            </div>
+            <div class="miyun-qa-item-meta">
+              <div class="listened">2人听过</div>
+              <div class="useful">100人觉得有用</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bm-tabbar">
+    <div class="bm-tabbar-item">
+      <p class="bm-tabbar-item-title miyun-bar-item-title">问诊金25.00元</p>
+    </div>
+    <a href="./ask-one-doctor.html" class="bm-tabbar-item miyun-bar-item-button">
+      <p class="bm-tabbar-item-title">提问</p>
+    </a>
+  </div>
+</body>
+
+</html>

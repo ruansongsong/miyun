@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="stylesheet" type="text/css" href="../../style/bbt-mobile.min.css">
+  <title>医生详情</title>
+</head>
+
+<body>
+  <div class="personal-center">
+    <img src="../../images/ask/avatar.jpg" alt="头像" class="personal-avatar">
+    <div class="personal-main">
+      <p class="personal-name">吴美宝</p>
+      <p class="personal-detail">广州市妇婴医院 主治医师</p>
+    </div>
+  </div>
+  <div class="bm-list-body">
+    <div class="bm-list-item">
+      <div class="bm-list-item-left bm-label-short">
+        姓名
+      </div>
+      <div class="bm-list-item-right">
+        <input type="text" class="bm-input" placeholder="请输入你的姓名" value="吴美宝">
+      </div>
+    </div>
+    <div class="bm-list-item">
+      <div class="bm-list-item-left bm-label-short">
+        职称
+      </div>
+      <div class="bm-list-item-right">
+        <input type="text" class="bm-input" placeholder="请输入你的职称" value="主任医师">
+      </div>
+    </div>
+    <div class="bm-list-item">
+      <div class="bm-list-item-left bm-label-short">
+        工作单位
+      </div>
+      <div class="bm-list-item-right">
+        <input type="text" class="bm-input" placeholder="请输入你的工作单位" value="广东省人民医院">
+      </div>
+    </div>
+    <div class="bm-list-item">
+      <div class="bm-list-item-left bm-label-short">
+        职务
+      </div>
+      <div class="bm-list-item-right">
+        <input type="text" class="bm-input" placeholder="请输入你的职务" value="主任">
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="bm-list-title">专长</div>
+  <div class="bm-list-textarea">
+    <textarea id="textarea-length" rows="8" maxlength="200" placeholder="请输入你的专长，包括：教育经历、工作经历、获得荣誉等"></textarea>
+    <div class="bm-list-textarea-meta">
+      <div class="bm-list-textarea-counter"><span id="counter">0</span>/200</div>
+    </div>
+  </div>
+  <div class="bm-btn-area"><a class="bm-btn bm-btn-primary">保存</a></div>
+  <script>
+    var textarea = document.getElementById('textarea-length');
+    var counter = document.getElementById('counter');
+    var textareaLength;
+    textarea.addEventListener('input', function () {
+      counter.innerText = textarea.value.length;
+    })
+  </script>
+</body>
+
+</html>

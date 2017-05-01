@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="stylesheet" type="text/css" href="../../style/bbt-mobile.min.css">
+  <title>医生详情</title>
+</head>
+
+<body>
+    <div class="personal-center">
+      <img src="../../images/ask/avatar.jpg" alt="头像" class="personal-avatar">
+      <div class="personal-main">
+        <p class="personal-name">吴美宝</p>
+        <p class="personal-detail">广州市妇婴医院 主治医师</p>
+      </div>
+    </div>
+      <div class="miyun-reserve">
+    <a class="miyun-reserve-item">
+      <p class="title">名医面诊</p>
+      <p class="price">￥300元</p>
+    </a>
+    <a class="miyun-reserve-item">
+      <p class="title">名医手术</p>
+      <p class="price">￥3000元</p>
+    </a>
+  </div>
+    <div class="bm-list-title">专家简介</div>
+    <p class="personal-intro">
+      女，主任医师，教授，硕士研究生导师，享受国务院 女，主任医师，教授，硕士研究生导师，享受国务院
+    </p>
+    <div class="bm-list-title">服务须知</div>
+    <p class="personal-intro">
+      女，主任医师，教授，硕士研究生导师，享受国务院 女，主任医师，教授，硕士研究生导师，享受国务院
+    </p>
+        <div class="bm-list-title">用户评价</div>
+    <p class="personal-intro">
+      女，主任医师，教授，硕士研究生导师，享受国务院 女，主任医师，教授，硕士研究生导师，享受国务院
+    </p>
+  </div>
+
+</body>
+
+</html>

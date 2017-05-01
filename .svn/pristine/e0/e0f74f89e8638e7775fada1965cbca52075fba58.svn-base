@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="stylesheet" type="text/css" href="../../style/bbt-mobile.min.css">
+  <title>订单确认成功</title>
+</head>
+<body>
+    <div class="miyun-character-body">
+    <a href="./doctor-detail.html" class="miyun-character-item">
+      <div class="miyun-character-item-main">
+        <img src="../../images/ask/avatar.jpg" alt="头像">
+        <div class="miyun-character-item-main-detail">
+          <div class="doctor-name">吴美宝</div>
+          <div class="doctor-detail">广州市妇婴医院 主治医师</div>
+          <div><span class="bm-tag">围产</span><span class="bm-tag">孕期营养</span></div>
+        </div>
+        <div class="bm-btn bm-btn-primary bm-btn-inline-small">我的账户</div>
+      </div>
+    </a>
+    </div>
+    <div class="bm-list-title">我的问题</div>
+    <div class="my-question">
+      <div class="my-question-item">
+        <div class="my-question-detail">
+          <p class="time">2017-02-14 11:50:30</p>
+          <p>头痛，孕早期经常出现头痛状态，应该如何解决</p>
+        </div>
+        
+      </div>
+      <a href="" class="bm-btn bm-btn-primary">我来答</a>
+    </div>
+        <div class="my-question">
+      <div class="my-question-item">
+        <div class="my-question-detail">
+          <p class="time">2017-02-14 11:50:30</p>
+          <p>头痛，孕早期经常出现头痛状态，应该如何解决</p>
+        </div>
+        
+      </div>
+      <a href="" class="bm-btn bm-btn-primary">我来答</a>
+    </div>
+    <div class="bm-list-title">我来答</div>
+        <div class="my-question">
+      <div class="my-question-item">
+        <div class="my-question-detail">
+          <p class="time">2017-02-14 11:50:30</p>
+          <p>头痛，孕早期经常出现头痛状态，应该如何解决</p>
+        </div>
+        
+      </div>
+      <a href="" class="bm-btn bm-btn-primary">医生抢答</a>
+    </div>
+</body>
+</html>

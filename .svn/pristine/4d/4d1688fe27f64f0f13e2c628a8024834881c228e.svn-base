@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="stylesheet" type="text/css" href="../../style/bbt-mobile.min.css">
+  <title>我要问</title>
+</head>
+
+<body>
+  <div class="bm-tabbar-panel">
+    <div class="miyun-header">
+      <div class="miyun-header-title">孕期有疑问，快速问医生</div>
+      <a href="./ask-some-doctor.html" class="bm-btn bm-btn-primary bm-btn-inline-small">我要问</a>
+    </div>
+    <div class="bm-list-title">我的提问<span class="more">更多</span></div>
+    <div class="miyun-qa-list">
+      <div class="miyun-qa-item">
+        <div class="miyun-qa-item-time">2017-3-04 11:59</div>
+        <div class="miyun-qa-item-question">头痛怎么办头痛怎么办头痛怎么办头痛怎么办头痛怎么办头痛怎么办头痛怎么办头痛怎么办头痛怎么办</div>
+        <div class="miyun-qa-item-answer">
+          <div class="miyun-qa-item-answer-left">
+            <div class="doctor-avatar">
+              <img src="../../images/ask/avatar.jpg" alt="医生头像">
+              <p>美宝</p>
+            </div>
+          </div>
+          <div class="miyun-qa-item-answer-right">
+            <div class="listen-answer">
+              <div class="listen-answer-left">
+                <div class="listen-answer-left-icon"> </div>
+                <div class="listen-answer-left-title">一元听答案</div>
+              </div>
+              <div class="listen-answer-right">60'</div>
+            </div>
+            <div class="miyun-qa-item-meta">
+              <div class="listened">2人听过</div>
+              <div class="useful">100人觉得有用</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="miyun-qa-item">
+        <div class="miyun-qa-item-time">2017-3-04 11:59</div>
+        <div class="miyun-qa-item-question">头痛怎么办头痛怎么办头痛怎么办头痛怎么办头痛怎么办头痛怎么办头痛怎么办头痛怎么办头痛怎么办</div>
+        <div class="miyun-qa-item-answer">
+          <div class="miyun-qa-item-answer-left">
+            <div class="doctor-avatar">
+              <img src="../../images/ask/avatar.jpg" alt="医生头像">
+              <p>美宝</p>
+            </div>
+          </div>
+          <div class="miyun-qa-item-answer-right">
+            <div class="listen-answer">
+              <div class="listen-answer-left">
+                <div class="listen-answer-left-icon"> </div>
+                <div class="listen-answer-left-title">一元听答案</div>
+              </div>
+              <div class="listen-answer-right">60'</div>
+            </div>
+            <div class="miyun-qa-item-meta">
+              <div class="listened">2人听过</div>
+              <div class="useful">100人觉得有用</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="miyun-qa-item">
+        <div class="miyun-qa-item-time">2017-3-04 11:59</div>
+        <div class="miyun-qa-item-question">头痛怎么办头痛怎么办头痛怎么办头痛怎么办头痛怎么办头痛怎么办头痛怎么办头痛怎么办头痛怎么办</div>
+        <div class="miyun-qa-item-answer">
+          <div class="miyun-qa-item-answer-left">
+            <div class="doctor-avatar">
+              <img src="../../images/ask/avatar.jpg" alt="医生头像">
+              <p>美宝</p>
+            </div>
+          </div>
+          <div class="miyun-qa-item-answer-right">
+            <div class="listen-answer">
+              <div class="listen-answer-left">
+                <div class="listen-answer-left-icon"> </div>
+                <div class="listen-answer-left-title">一元听答案</div>
+              </div>
+              <div class="listen-answer-right">60'</div>
+            </div>
+            <div class="miyun-qa-item-meta">
+              <div class="listened">2人听过</div>
+              <div class="useful">100人觉得有用</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="miyun-list-body">
+      <a href="./recommend-doctors.html" class="miyun-list-item">
+        <div class="miyun-list-item-title">孕期饮食</div>
+        <div class="miyun-list-item-detail">有5个医生可以咨询了有5个医生可以咨询了有5个医生可以咨询了</div>
+        <span class="more"></span>
+      </a>
+      <div class="miyun-list-item">
+        <a href="./recommend-doctors.html" class="miyun-list-item-title">孕期检查</a>
+        <div class="miyun-list-item-detail">有5个医生可以咨询了</div>
+        <span class="more"></span>
+      </div>
+      <div class="miyun-list-item">
+        <div class="miyun-list-item-title">孕期饮食</div>
+        <div class="miyun-list-item-detail">有5个医生可以咨询了</div>
+        <span class="more"></span>
+      </div>
+      <div class="miyun-list-item">
+        <div class="miyun-list-item-title">孕期饮食</div>
+        <div class="miyun-list-item-detail">有5个医生可以咨询了</div>
+        <span class="more"></span>
+      </div>
+      <div class="miyun-list-item">
+        <div class="miyun-list-item-title">孕期饮食</div>
+        <div class="miyun-list-item-detail">有5个医生可以咨询了</div>
+        <span class="more"></span>
+      </div>
+    </div>
+  </div>
+  <div class="bm-tabbar">
+    <a href="./ask-doctor.html" class="bm-tabbar-item bm-tabbar-item-on">
+      <div class="bm-tabbar-item-icon">
+        <svg t="1493566383247" class="icon" style="" viewBox="0 0 1304 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2918"
+          xmlns:xlink="http://www.w3.org/1999/xlink" width="22.921875" height="18">
+          <defs>
+            <style type="text/css"></style>
+          </defs>
+          <path d="M649.74848 316.416C650.6496 284.0576 654.45888 259.44064 661.21728 242.56512 667.97568 225.6896 678.74816 210.65728 693.57568 197.34528 708.4032 184.1152 724.95104 174.32576 743.17824 168.01792 761.36448 161.75104 780.61568 158.59712 800.84992 158.59712 841.76896 158.59712 875.80672 170.63936 903.00416 194.68288 930.24256 218.7264 943.84128 250.79808 943.84128 290.816 943.84128 308.79744 940.31872 325.09952 933.39648 339.72224 926.39232 354.304 911.5648 372.5312 888.87296 394.32192 866.14016 416.1536 851.06688 431.67744 843.65312 440.89344 836.23936 450.10944 830.62784 461.12768 826.7776 473.9072 822.96832 486.72768 821.28896 503.93088 821.73952 525.5168L769.14688 525.5168C769.14688 500.36736 771.15392 480.256 775.20896 465.14176 779.264 450.10944 784.1792 436.92032 790.03648 425.69728 795.89376 414.47424 809.3696 397.9264 830.50496 376.13568 851.64032 354.304 866.83648 338.45248 876.05248 328.58112 885.26848 318.6688 889.89696 303.5136 889.89696 283.0336 889.89696 262.59456 882.23744 244.49024 866.9184 228.72064 851.64032 212.992 829.15328 205.12768 799.49824 205.12768 733.7984 205.12768 700.98944 242.23744 700.98944 316.416L649.74848 316.416 649.74848 316.416ZM767.7952 580.15744 826.49088 580.15744 826.49088 642.21184 767.7952 642.21184 767.7952 580.15744Z"
+            p-id="2919"></path>
+          <path d="M958.2592 909.84448 821.4528 810.5984 433.9712 810.5984C375.64416 810.5984 328.21248 763.16672 328.21248 704.83968L328.21248 120.13568C328.21248 61.80864 375.64416 14.37696 433.9712 14.37696L1155.39968 14.37696C1213.72672 14.37696 1261.1584 61.80864 1261.1584 120.13568L1261.1584 704.83968C1261.1584 763.16672 1213.72672 810.5984 1155.39968 810.5984L1035.18208 810.5984 958.2592 909.84448 958.2592 909.84448ZM433.9712 55.33696C398.21312 55.33696 369.17248 84.3776 369.17248 120.13568L369.17248 704.83968C369.17248 740.59776 398.21312 769.6384 433.9712 769.6384L834.72384 769.6384 950.19008 853.4016 1015.11168 769.6384 1155.39968 769.6384C1191.15776 769.6384 1220.1984 740.59776 1220.1984 704.83968L1220.1984 120.13568C1220.1984 84.3776 1191.15776 55.33696 1155.39968 55.33696L433.9712 55.33696 433.9712 55.33696Z"
+            p-id="2920"></path>
+          <path d="M226.87744 1006.10048 168.87808 931.2256 83.39456 931.2256C37.64224 931.2256 0.4096 893.99296 0.4096 848.19968L0.4096 419.47136C0.4096 373.71904 37.64224 336.44544 83.39456 336.44544L369.17248 336.44544 369.17248 704.83968C369.17248 740.59776 398.21312 769.6384 433.9712 769.6384L695.41888 769.6384 695.41888 848.19968C695.41888 893.99296 658.18624 931.2256 612.43392 931.2256L330.09664 931.2256 226.87744 1006.10048 226.87744 1006.10048ZM83.39456 377.40544C60.2112 377.40544 41.3696 396.288 41.3696 419.47136L41.3696 848.19968C41.3696 871.38304 60.2112 890.2656 83.39456 890.2656L188.94848 890.2656 234.94656 949.6576 316.78464 890.2656 612.43392 890.2656C635.61728 890.2656 654.45888 871.38304 654.45888 848.19968L654.45888 810.5984 433.9712 810.5984C375.64416 810.5984 328.21248 763.16672 328.21248 704.83968L328.21248 377.40544 83.39456 377.40544 83.39456 377.40544Z"
+            p-id="2921"></path>
+        </svg>
+      </div>
+      <p class="bm-tabbar-item-title">问</p>
+    </a>
+    <a href="./doctor-answer.html" class="bm-tabbar-item">
+      <div class="bm-tabbar-item-icon">
+        <svg t="1493566503834" class="icon" style="" viewBox="0 0 1304 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3694"
+          xmlns:xlink="http://www.w3.org/1999/xlink" width="22.921875" height="18">
+          <defs>
+            <style type="text/css"></style>
+          </defs>
+          <path d="M767.316108 684.07296 572.346508 684.07296 572.346508 468.5824 929.108108 122.55232 1123.954828 323.13344 986.165388 450.68288 841.044108 306.05312 864.186508 282.86976 986.984588 405.21728 1077.055628 321.90464 928.452748 168.87808 605.114508 482.46784 605.114508 651.30496 753.553548 651.30496 937.504908 464.0768 960.852108 487.0144 767.316108 684.07296"
+            p-id="3695"></path>
+          <path d="M970.641548 904.192 835.965068 806.5024 447.131788 806.5024C391.098508 806.5024 345.469068 760.91392 345.469068 704.83968L345.469068 120.13568C345.469068 64.06144 391.098508 18.47296 447.131788 18.47296L1168.642188 18.47296C1224.675468 18.47296 1270.263948 64.06144 1270.263948 120.13568L1270.263948 704.83968C1270.263948 760.91392 1224.675468 806.5024 1168.642188 806.5024L1046.376588 806.5024 970.641548 904.192 970.641548 904.192ZM447.131788 51.24096C409.161868 51.24096 378.237068 82.1248 378.237068 120.13568L378.237068 704.83968C378.237068 742.8096 409.161868 773.7344 447.131788 773.7344L846.614668 773.7344 964.169868 859.05408 1030.361228 773.7344 1168.642188 773.7344C1206.612108 773.7344 1237.495948 742.8096 1237.495948 704.83968L1237.495948 120.13568C1237.495948 82.1248 1206.612108 51.24096 1168.642188 51.24096L447.131788 51.24096 447.131788 51.24096Z"
+            p-id="3696"></path>
+          <path d="M240.898188 1000.448 184.045708 927.1296 96.555148 927.1296C53.055628 927.1296 17.666188 891.74016 17.666188 848.19968L17.666188 419.47136C17.666188 375.97184 53.055628 340.54144 96.555148 340.54144L378.237068 340.54144 378.237068 704.83968C378.237068 742.8096 409.161868 773.7344 447.131788 773.7344L704.483468 773.7344 704.483468 848.19968C704.483468 891.74016 669.134988 927.1296 625.635468 927.1296L341.946508 927.1296 240.898188 1000.448 240.898188 1000.448ZM96.555148 373.30944C71.118988 373.30944 50.434188 394.0352 50.434188 419.47136L50.434188 848.19968C50.434188 873.6768 71.118988 894.3616 96.555148 894.3616L200.142988 894.3616 247.328908 955.26912 331.296908 894.3616 625.635468 894.3616C651.030668 894.3616 671.756428 873.6768 671.756428 848.19968L671.756428 806.5024 447.131788 806.5024C391.098508 806.5024 345.469068 760.91392 345.469068 704.83968L345.469068 373.30944 96.555148 373.30944 96.555148 373.30944Z"
+            p-id="3697"></path>
+        </svg>
+      </div>
+      <p class="bm-tabbar-item-title">答</p>
+    </a>
+  </div>
+</body>
+
+</html>

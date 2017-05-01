@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="stylesheet" type="text/css" href="../../style/bbt-mobile.min.css">
+  <title>名医面诊</title>
+</head>
+
+<body>
+  <div class="personal-center">
+    <img src="../../images/ask/avatar.jpg" alt="头像" class="personal-avatar">
+    <div class="personal-main">
+      <p class="personal-name">吴美宝</p>
+      <p class="personal-detail">广州市妇婴医院 主治医师</p>
+    </div>
+  </div>
+  <div class="bm-list-title">提交信息</div>
+  <form>
+
+    <div class="bm-list-body">
+      <div class="bm-list-item">
+        <div class="bm-list-item-left bm-label-short">
+          <label for="" class="">名医面诊</label>
+        </div>
+        <div class="bm-list-item-right-extra bm-label-long">
+          <div class="bm-list-item-caption">￥300元</div>
+        </div>
+      </div>
+      <div class="bm-list-item">
+        <div class="bm-list-item-left bm-label-short">
+          患者姓名
+        </div>
+        <div class="bm-list-item-right">
+          <input type="text" class="bm-input" placeholder="请输入你的姓名">
+        </div>
+      </div>
+      <div class="bm-list-item">
+        <div class="bm-list-item-left bm-label-short">
+          身份证
+        </div>
+        <div class="bm-list-item-right">
+          <input type="text" class="bm-input" placeholder="请输入你的身份证号码">
+        </div>
+      </div>
+      <div class="bm-list-item">
+        <div class="bm-list-item-left bm-label-short">
+          诊疗卡号
+        </div>
+        <div class="bm-list-item-right">
+          <input type="text" class="bm-input" placeholder="若没有，则不输入">
+        </div>
+      </div>
+      <div class="bm-list-item">
+        <div class="bm-list-item-left bm-label-short">
+          联系号码
+        </div>
+        <div class="bm-list-item-right">
+          <input type="text" class="bm-input" placeholder="请输入你的联系号码">
+        </div>
+      </div>
+      <div class="bm-list-item">
+        <div class="bm-list-item-left bm-label-short">
+          <label for="" class="">预约时间</label>
+        </div>
+        <div class="bm-list-item-right-extra bm-label-long">
+          <input type="text" id='datetime-picker' class="bm-input bm-list-item-caption" id="choose-date" placeholder="请选择时间" data-toggle='date'
+            readonly>
+        </div>
+      </div>
+    </div>
+    <div class="bm-btn-area">
+      <a href="#" class="bm-btn bm-btn-primary">提交</a>
+    </div>
+  </form>
+  <script src="../../js/jquery-2.1.4.min.js"></script>
+  <script src="../../js/jquery-weui.min.js"></script>
+  <script>
+    $("#datetime-picker").datetimePicker();
+  </script>
+</body>
+
+</html>
